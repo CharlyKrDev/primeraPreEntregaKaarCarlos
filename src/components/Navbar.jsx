@@ -19,9 +19,9 @@ export const Navbar = () => {
         <header className='bg-white font-bold text-black'>
 
             <nav className='flex justify-between items-center w-[92%] mx-auto'>
-                <a href=""><img className='w-32' src="../public/eCommerce.svg" alt="logo" /></a>
+                <a className='flex gap-2 items-center justify-center' href=""><img className='w-24 mt-0.5' src="../public/eCommerce.svg" alt="logo" /><img className='w-16' src="../public/ecommerce-svgrepo-com.svg" alt="logo" /></a>
                 <div className={menuClass}>
-                    <ul className='flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8'>
+                    <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
                         <li><a className='hover:text-gray-500' href="">Tienda</a></li>
                         <li><a className='hover:text-gray-500' href="">Quienes somos?</a></li>
                         <li><a className='hover:text-gray-500' href="">Contacto</a></li>
