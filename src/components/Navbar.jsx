@@ -16,7 +16,7 @@ export const Navbar = () => {
 
     return (
 
-        <header className='bg-white font-bold text-black'>
+        <header className='bg-white font-bold text-black fixed w-full'>
 
             <nav className='flex justify-between items-center w-[92%] mx-auto'>
                 <a className='flex gap-2 items-center justify-center' href=""><img className='w-24 mt-0.5' src="../public/eCommerce.svg" alt="logo" /><img className='w-16' src="../public/ecommerce-svgrepo-com.svg" alt="logo" /></a>
