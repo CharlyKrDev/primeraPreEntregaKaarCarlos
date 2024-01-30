@@ -1,13 +1,13 @@
 import React from 'react'
-
+import { WelcomeTyping } from './WelcomeTyping'
 export const ItemListContainer = () => {
   return (
 
-    <main className='text-white'>
-        <section className='flex flex-col text-white  w-full items-center justify-center bg-green-400 min-h-[30vh]'>CARRUSEL</section>
-        <section className='flex gap-10 items-center justify-center min-h-[60vh]'>
-        <article className='flex flex-col w-1/2 items-center'><p>CONTENIDO/BIENVENIDO</p></article>
-        <div className='flex flex-col w-1/2 items-center'><img src="./public/portada.jpg" alt="portada" /></div>
+    <main>
+        <section className='flex flex-col text-white items-center justify-center bg-[#242424] min-h-[30vh] box-content w-auto h-auto border-4'>CARRUSEL</section>
+        <section className='md:flex gap-10 justify-center max-h-[70vh]'>
+        <article className='flex flex-col w-1/3 md:m-4 m-auto'><h1 className='font-bold'><WelcomeTyping/></h1><p className='m-auto text-lg'>En nuestra web no solo vas a encontrar los <strong>juegos</strong> mas actuales del mercado, sino que también vas a poder ser parte de una de las comunidades <strong>gamers</strong> mas importantes!</p></article>
+        <div className='flex flex-col w-auto items-center '><img className='bg-white max-h-[60vh]'src="./public/portada.jpg" alt="portada" /></div>
         </section>
         
     </main>
