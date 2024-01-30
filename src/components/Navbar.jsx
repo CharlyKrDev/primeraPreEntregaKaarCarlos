@@ -1,6 +1,8 @@
 import React, { useState} from 'react';
 import { CartWidget } from './CartWidget';
-import { SearchInput } from './SearchInput'
+import { SearchInput } from './SearchInput';
+import Logo from '../../public/logo.jpg'
+import Ecommerce from '../../public/eCommerce.svg'
 
 export const Navbar = () => {
 
@@ -22,7 +24,7 @@ export const Navbar = () => {
         <header className='bg-black font-bold text-white'>
 
             <nav className='flex justify-between items-center w-[99%] mx-auto'>
-                <a className='flex gap-1 items-center justify-center ml-5' href="#"><img className='w-16 mt-0.5 invert' src="./src/assets/eCommerce.svg" alt="logo" /><img className='w-16 mr-2' src="./src/assets/logo.jpg" alt="logo" /></a>
+                <a className='flex gap-1 items-center justify-center ml-5' href="#"><img className='w-16 mt-0.5 invert' src={Ecommerce} alt="logo" /><img className='w-16 mr-2' src={Logo} alt="logo" /></a>
                 <div className={menuClass}>
                     <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
                         <li><a className='hover:text-gray-500' href="#">Tienda</a></li>
