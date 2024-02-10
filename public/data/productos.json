@@ -1,0 +1,147 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mario Bros",
+        "img": "1.webp",
+        "precioVigente": 99,
+        "precioAnterior": 110,
+        "descripcion": "El clásico juego de Mario Bros lanzado en 1983 remasterizado para PC.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 2
+    },
+    {
+        "id": 2,
+        "nombre": "Age of Empires II",
+        "img": "2.webp",
+        "precioVigente": 47,
+        "precioAnterior": 70,
+        "descripcion": "Es un juego de estrategia en tiempo real ambientado en la edad media.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 0
+    },
+    {
+        "id": 3,
+        "nombre": "Lineage 2",
+        "img": "3.webp",
+        "precioVigente": 50,
+        "precioAnterior": 55,
+        "descripcion": "Es un juego de rol multijugador masivo en línea.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 10
+        
+    },
+    {
+        "id": 4,
+        "nombre": "The Elder Scrolls IV: Oblivion",
+        "img": "4.webp",
+        "precioVigente": 70,
+        "precioAnterior": 90,
+        "descripcion": "Oblivion nos trae una propuesta muy destacada tanto en jugabilidad como en gráficos.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 9
+    },
+    {
+        "id": 5,
+        "nombre": "Cyberpunk 2077",
+        "img": "5.webp",
+        "precioVigente": 125,
+        "precioAnterior": 125,
+        "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": true,
+        "descuento":10,
+        "stock": 32
+    },
+    {
+        "id": 6,
+        "nombre": "Resident Evil 4 - Remake",
+        "img": "6.webp",
+        "precioVigente": 150,
+        "precioAnterior": 199,
+        "descripcion": "Remake del clásico Resident Evil 4.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 11
+    },
+    {
+        "id": 7,
+        "nombre": "Hogwart Legacy - Deluxe",
+        "img": "7.webp",
+        "precioVigente": 80,
+        "precioAnterior": 99,
+        "descripcion": "RPG de acción y aventura de mundo abierto ambientado en un mundo mágico.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 5
+    },
+    {
+        "id": 8,
+        "nombre": "Alan Wake 2",
+        "img": "8.webp",
+        "precioVigente": 45,
+        "precioAnterior": 60,
+        "descripcion": "Alan Wake es un videojuego de acción-aventura y terror psicológico desarrollado por Remedy Entertainment y publicado por Microsoft Studios.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 6
+    },
+    {
+        "id": 9,
+        "nombre": "GTA VI - PreVenta",
+        "img": "9.webp",
+        "precioVigente": 100,
+        "precioAnterior": 125,
+        "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 8
+    },
+    {
+        "id": 10,
+        "nombre": "Baldur`s Gate 3",
+        "img": "10.webp",
+        "precioVigente": 155,
+        "precioAnterior": 175,
+        "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": true,
+        "descuento":10,
+        "stock": 3
+    },
+    {
+        "id": 11,
+        "nombre": "Red Dead Redemption 2",
+        "img": "11.webp",
+        "precioVigente": 75,
+        "precioAnterior": 95,
+        "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el viejo oeste.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": false,
+        "descuento":10,
+        "stock": 43
+    },
+    {
+        "id": 12,
+        "nombre": "FC24",
+        "img": "12.webp",
+        "precioVigente": 69,
+        "precioAnterior": 99,
+        "descripcion": "EA Sports FC 24​ es un videojuego de fútbol, desarrollado por EA, y publicado por EA Sports.",
+        "consola":["PS5", "PC", "Switch"],
+        "promocion": true,
+        "descuento":10,
+        "stock": 54
+    }
+]

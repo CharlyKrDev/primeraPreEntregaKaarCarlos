@@ -1,8 +1,8 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { CartWidget } from './CartWidget';
 import { SearchInput } from './SearchInput';
-import Logo from '../../public/logo.jpg'
-import Ecommerce from '../../public/eCommerce.svg'
+import Logo from '../../public/img/logo.jpg'
+import Ecommerce from '../../public/img/eCommerce.svg'
 
 export const Navbar = () => {
 
@@ -27,16 +27,16 @@ export const Navbar = () => {
                 <a className='flex gap-1 items-center justify-center ml-5' href="#"><img className='w-16 mt-0.5 invert' src={Ecommerce} alt="logo" /><img className='w-16 mr-2' src={Logo} alt="logo" /></a>
                 <div className={menuClass}>
                     <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
-                        <li><a className='hover:text-gray-500' href="#">Tienda</a></li>
+                        <li><a className='hover:text-gray-500' href="#tienda">Tienda</a></li>
                         <li><a className='hover:text-gray-500' href="#">Quienes somos?</a></li>
                         <li><a className='hover:text-gray-500' href="#">Comunidad</a></li>
                         <li><a className='hover:text-gray-500' href="#">Contacto</a></li>
-                        <li><SearchInput/></li>
+                        <li><SearchInput /></li>
                     </ul>
                 </div>
-                <CartWidget/>
+                <CartWidget />
                 <div className='flex items-center gap-6'>
-                <button className='text-white px-2 py-2 bg-blue-700 hover:bg-blue-800 rounded-lg mr-2'>
+                    <button className='text-white px-2 py-2 bg-blue-700 hover:bg-blue-800 rounded-lg mr-2'>
                         Ingresar
                     </button>
 
