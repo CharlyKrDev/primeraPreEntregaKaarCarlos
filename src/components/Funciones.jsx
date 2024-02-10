@@ -1,9 +1,10 @@
 
 export const Funciones = () => {
 
-    const descuentoAplicado = (prod.precioVigente) - ((prod.precioVigente * prod.descuento) / 100)
-    const stock = prod.stock === 0 ? <span className="text-red-500 font-bold">Agotado</span> : (prod.stock <= 3 ?<span className="text-red-500 font-bold">¡Últimas unidades!</span> : <p className="text-end text-blue-400">Stock: {prod.stock}</p>)
+  const botonConsola = "rounded-md bg-[#313131] border-[1px] p-1 border-green-400 transition duration-300 ease-out hover:bg-green-200 hover:text-black hover:font-bold hover:ease-in"
+
   return (
+
 
   )
 }

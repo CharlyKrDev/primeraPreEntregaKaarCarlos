@@ -9,14 +9,14 @@ export const ItemListContainer = () => {
     useEffect(() => {
         const obtenerProductos = async () => {
             try {
-                const response = await fetch('./data/productos.json');
-                const result = await response.json();
-                setProductos(result)
-                console.log(result)
+                const respuesta = await fetch('./data/productos.json');
+                const resultado = await respuesta.json();
+                setProductos(resultado)
+                console.log(resultado)
 
 
             } catch (error) {
-                console.log(Error)
+                console.log(error)
             }
         }
         obtenerProductos()
