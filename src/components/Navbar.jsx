@@ -17,7 +17,7 @@ export const Navbar = () => {
         setMenuOpen(!menuOpen);
 
     };
-    const menuClass = `duration-500 md:static absolute bg-black opacity-80 md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[8%]' : 'top-[-100%]'} md:w-auto flex items-center px-5 w-full`;
+    const menuClass = `duration-500 md:static absolute bg-black opacity-80 md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto flex items-center px-5 w-full`;
 
     return (
 
