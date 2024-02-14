@@ -8,13 +8,13 @@ import { Footer } from './components/Footer'
 
 export const App = () => {
   return (
-      <>
-    <Navbar/>
-    <LandingPage/>
-    <ItemListContainer/>
-    <Footer/>
-   
+    <>
+      <Navbar />
+      <LandingPage />
+      <ItemListContainer />
+      <Footer />
 
-      </>
+
+    </>
   )
-  }
+}
