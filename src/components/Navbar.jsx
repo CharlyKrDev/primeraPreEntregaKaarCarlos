@@ -23,11 +23,11 @@ export const Navbar = () => {
 
         <header className='bg-black font-bold text-white'>
 
-            <nav className='flex justify-between items-center w-[99%] mx-auto'>
-                <a className='flex gap-1 items-center justify-center ml-5' href="#"><img className='w-16 mt-0.5 invert' src={Ecommerce} alt="logo" /><img className='w-16 mr-2' src={Logo} alt="logo" /></a>
+            <nav className='flex justify-between items-center  mx-auto'>
+                <a className='flex gap-1 items-center justify-center ml-5' href="/"><img className='w-16 mt-0.5 invert' src={Ecommerce} alt="logo" /><img className='w-16 mr-2' src={Logo} alt="logo" /></a>
                 <div className={menuClass}>
                     <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
-                        <li><a className='hover:text-gray-500' href="#tienda">Tienda</a></li>
+                        <li><a className='hover:text-gray-500' href="tienda">Tienda</a></li>
                         <li><a className='hover:text-gray-500' href="#">Quienes somos?</a></li>
                         <li><a className='hover:text-gray-500' href="#">Comunidad</a></li>
                         <li><a className='hover:text-gray-500' href="#">Contacto</a></li>
@@ -36,7 +36,7 @@ export const Navbar = () => {
                 </div>
                 <CartWidget />
                 <div className='flex items-center gap-6'>
-                    <button className='text-white px-2 py-2 bg-blue-700 hover:bg-blue-800 rounded-lg mr-2'>
+                    <button className='text-white px-2 py-2 bg-blue-700 hover:bg-blue-800 rounded-lg mr-48'>
                         Ingresar
                     </button>
 

@@ -6,7 +6,7 @@
         "precioVigente": 99,
         "precioAnterior": 110,
         "descripcion": "El clásico juego de Mario Bros lanzado en 1983 remasterizado para PC.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 2
@@ -18,7 +18,7 @@
         "precioVigente": 47,
         "precioAnterior": 70,
         "descripcion": "Es un juego de estrategia en tiempo real ambientado en la edad media.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 0
@@ -30,7 +30,7 @@
         "precioVigente": 50,
         "precioAnterior": 55,
         "descripcion": "Es un juego de rol multijugador masivo en línea.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 10
@@ -43,7 +43,7 @@
         "precioVigente": 70,
         "precioAnterior": 90,
         "descripcion": "Oblivion nos trae una propuesta de mundo abierto.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 9
@@ -55,7 +55,7 @@
         "precioVigente": 125,
         "precioAnterior": 125,
         "descripcion": "RPG de acción y aventura  ambientado en el futuro.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": true,
         "descuento":10,
         "stock": 32
@@ -67,7 +67,7 @@
         "precioVigente": 150,
         "precioAnterior": 199,
         "descripcion": "Remake del clásico Resident Evil 4, un excelente juego de terror.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 11
@@ -79,7 +79,7 @@
         "precioVigente": 80,
         "precioAnterior": 99,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en un mundo mágico.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 5
@@ -91,7 +91,7 @@
         "precioVigente": 45,
         "precioAnterior": 60,
         "descripcion": "Alan Wake es un videojuego de acción-aventura y terror psicológico.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 6
@@ -103,7 +103,7 @@
         "precioVigente": 100,
         "precioAnterior": 125,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 8
@@ -115,7 +115,7 @@
         "precioVigente": 155,
         "precioAnterior": 175,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": true,
         "descuento":10,
         "stock": 3
@@ -127,7 +127,7 @@
         "precioVigente": 75,
         "precioAnterior": 95,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el viejo oeste.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": false,
         "descuento":10,
         "stock": 43
@@ -139,7 +139,7 @@
         "precioVigente": 69,
         "precioAnterior": 99,
         "descripcion": "EA Sports FC 24​ es un videojuego de fútbol, desarrollado por EA.",
-        "consola":["PS5", "PC", "Switch"],
+        "categoria":["PS5", "PC", "Switch"],
         "promocion": true,
         "descuento":10,
         "stock": 54
