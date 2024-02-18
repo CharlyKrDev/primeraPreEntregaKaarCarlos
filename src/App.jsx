@@ -24,7 +24,7 @@ export const App = () => {
           <Route path='/producto:' element = { <ItemDetailsContainer /> } />
           <Route path='/carrito' element ={ <Cart /> }/>
           <Route path='/checkout' element ={ <Checkout /> } />
-          <Route path='/categoria'/>
+          <Route path='/categoria/'/>
 
         </Routes>
 
