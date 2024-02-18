@@ -8,6 +8,7 @@ import { Dropdown } from './Dropdown';
 export const Navbar = () => {
     const [iconName, setIconName] = useState('menu');
     const [menuOpen, setMenuOpen] = useState(false);
+    const tiendaWeb= './tienda'
 
 
     const onToggleMenu = () => {
@@ -28,7 +29,7 @@ export const Navbar = () => {
                 <a className='flex gap-1 items-center justify-center sm:ml-12 ml-6' href="/"><img className='w-16 mt-0.5 invert' src={Ecommerce} alt="logo" /><img className='w-16 pr-4' src={Logo} alt="logo" /></a>
                 <div className={menuClass}>
                     <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
-                        <li className={menuGeneral}><a className='hover:text-gray-500' href="./tienda">Tienda</a></li>
+                        <li className={menuGeneral}><a className='hover:text-gray-500' href={tiendaWeb}>Tienda</a></li>
 
                         <Dropdown/>
                         <li className={menuGeneral}><a className='hover:text-gray-500' href="#">Comunidad</a></li>
