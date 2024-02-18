@@ -29,7 +29,7 @@ export const ItemListContainer = () => {
 
         <>
             <section>
-                <h2 id='tienda' className="m-4 text-[30px] mb-7">Tienda</h2>
+                <h2 id='tienda' className="m-4 ml-12 text-[30px] mb-7">Tienda</h2>
                 <div className='flex flex-wrap justify-center gap-2 m-auto w-[100%]'>
 
 

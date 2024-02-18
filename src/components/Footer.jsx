@@ -1,8 +1,8 @@
 
 export const Footer = () => {
   return (
-    <footer className="h-10 m-auto">
-      <h3 className='text-center bg-black text-white text-bold p-8'>@COPYRIGHT 2024 - Tienda EcommerceGamer - Carlos Kr. ALL RIGHTS RESERVED.  </h3>
+    <footer className="flex w-full items-center bg-black h-[100px]">
+      <h3 className='w-full text-center bg-black text-white text-bold'>@COPYRIGHT 2024 - Tienda EcommerceGamer - Carlos Kr. ALL RIGHTS RESERVED.  </h3>
     </footer>
   )
 }
