@@ -5,7 +5,7 @@ export const Item = ({ prod }) => {
   const [count, setCount] = useState(0);
   const handleIncrement = () => (count < prod.stock ? setCount(count +1): count);
   const handleDecrement = () => (count > 0 ? setCount(count - 1) : count);
-  const agregarCarrito = `mb-4 disabled:pointer-events-none disabled:bg-gray-500 bg-blue-700 sm:w-[75%] w-[55%] text-[12px] text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
+  const agregarCarrito = `mb-4 disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[75%] w-[55%] text-[12px] text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
     count == 0 ? "block" : "hidden"
   }`;
   const cargadoCarrito = `text-white container m-auto mb-6 mt-3 ${
