@@ -1,19 +1,28 @@
 import { useState, useEffect } from "react";
 import { ItemList } from './ItemList'
-
+import { useParams } from "react-router-dom";
 
 import React from 'react'
 
 export const ItemListContainer = () => {
     const [producto, setProductos] = useState([])
+    const { cid } = useParams()
+
+    console.log(cid)
     useEffect(() => {
         const obtenerProductos = async () => {
             try {
-                const respuesta = await fetch('./data/productos.json');
+                const respuesta = await fetch('../data/productos.json');
                 const resultado = await respuesta.json();
-                setProductos(resultado)
-                console.log(resultado)
+                if(cid){
 
+                    const productosFiltrados = resultado.filter( resp => resp.categoria.some(cat => cid.includes(cat)));
+                    setProductos(productosFiltrados)
+
+                } else{
+                    setProductos(resultado)
+                    console.log(resultado)
+                }
 
             } catch (error) {
                 console.log(error)
@@ -21,7 +30,7 @@ export const ItemListContainer = () => {
         }
         obtenerProductos()
 
-    }, [])
+    }, [cid])
 
 
 

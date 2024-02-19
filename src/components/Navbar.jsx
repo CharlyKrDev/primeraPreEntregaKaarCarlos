@@ -8,7 +8,7 @@ import { Dropdown } from './Dropdown';
 export const Navbar = () => {
     const [iconName, setIconName] = useState('menu');
     const [menuOpen, setMenuOpen] = useState(false);
-    const tiendaWeb= './tienda'
+    const tiendaWeb= '/tienda'
 
 
     const onToggleMenu = () => {

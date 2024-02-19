@@ -7,7 +7,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import { Cart } from './components/Cart'
 import { Checkout } from './components/Checkout'
 import { ItemDetailsContainer } from './components/ItemDetailsContainer'
-ItemDetailsContainer
+import { NotFound } from './components/NotFound'
 
 
 
@@ -21,10 +21,12 @@ export const App = () => {
 
           <Route path='/' element ={ <LandingPage /> } />
           <Route path='/tienda' element ={ <ItemListContainer /> } />
-          <Route path='/producto:' element = { <ItemDetailsContainer /> } />
+          <Route path='/categoria/:cid' element = { <ItemListContainer /> }/>
+          <Route path='/productos/:pid' element = { <ItemDetailsContainer /> } />
           <Route path='/carrito' element ={ <Cart /> }/>
           <Route path='/checkout' element ={ <Checkout /> } />
-          <Route path='/categoria/'/>
+          <Route path='*' element ={ <NotFound /> } />
+
 
         </Routes>
 
