@@ -20,7 +20,7 @@ export const Navbar = () => {
   const menuClass = `duration-500 md:static absolute bg-black opacity-80 md:min-h-fit min-h-[60vh] left-0 ${
     menuOpen ? "top-[6%]" : "top-[-100%]"
   } md:w-auto flex items-center px-5 w-full`;
-  const menuGeneral = `text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
+  const menuGeneral = `active:scale-95 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
 
   return (
     <header className="bg-black font-bold text-white">
@@ -34,22 +34,22 @@ export const Navbar = () => {
         </a>
         <div className={menuClass}>
           <ul className="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8">
-            <li className={menuGeneral}>
+            <li>
               <Link to={tiendaWeb}>
-                <p className="hover:text-gray-500">Tienda</p>
+                <button className={menuGeneral}>Tienda</button>
               </Link>
             </li>
 
             <Categorias />
-            <li className={menuGeneral}>
-              <a className="hover:text-gray-500" href="#">
+            <li>
+              <button  className={menuGeneral}>
                 Comunidad
-              </a>
+              </button>
             </li>
-            <li className={menuGeneral}>
-              <a className="hover:text-gray-500" href="#">
+            <li >
+              <button  className={menuGeneral}>
                 Contacto
-              </a>
+              </button>
             </li>
             <li className="text-white px-2 py-2 rounded-lg mr-24"></li>
           </ul>

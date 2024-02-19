@@ -43,24 +43,24 @@ export const Categorias = () => {
           >
             <li>
               <Link to={"/categoria/pc"}>
-                <p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <p className="active:scale-95 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                   PC
                 </p>
-              </Link>{" "}
+              </Link>
             </li>
             <li>
               <Link to={"/categoria/ps5"}>
-                <p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <p className="active:scale-95 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                   PS5
                 </p>
-              </Link>{" "}
+              </Link>
             </li>
             <li>
               <Link to={"/categoria/switch"}>
-                <p className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <p className="active:scale-95 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                   SWITCH
                 </p>
-              </Link>{" "}
+              </Link>
             </li>
           </ul>
         </div>

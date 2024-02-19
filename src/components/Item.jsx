@@ -58,7 +58,7 @@ export const Item = ({ prod }) => {
             alt={`Imagen de ${prod.nombre}`}
           />
         </picture>
-        <dir><h2 className="text-md text-wrap">{prod.nombre}</h2></dir>
+        <dir className='p-0 w-[100%]'><h2 className=" text-md text-wrap text-center mr-2 ml-2 m-auto">{prod.nombre}</h2></dir>
         <div className="text-right mb-2 ">
           {prod.categoria.map((categoria, index) => (
             <button key={index} className={botonCategoria}>
