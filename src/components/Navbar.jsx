@@ -3,12 +3,12 @@ import { CartWidget } from './CartWidget';
 import { SearchInput } from './SearchInput';
 import Logo from '../../public/img/logo.jpg'
 import Ecommerce from '../../public/img/eCommerce.svg'
-import { Dropdown } from './Dropdown';
+import { Categorias } from './Categorias';
 
 export const Navbar = () => {
     const [iconName, setIconName] = useState('menu');
     const [menuOpen, setMenuOpen] = useState(false);
-    const tiendaWeb= '/tienda'
+    const tiendaWeb= './tienda'
 
 
     const onToggleMenu = () => {
@@ -31,7 +31,7 @@ export const Navbar = () => {
                     <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8'>
                         <li className={menuGeneral}><a className='hover:text-gray-500' href={tiendaWeb}>Tienda</a></li>
 
-                        <Dropdown/>
+                        <Categorias/>
                         <li className={menuGeneral}><a className='hover:text-gray-500' href="#">Comunidad</a></li>
                         <li className={menuGeneral}><a className='hover:text-gray-500' href="#">Contacto</a></li>
                         <li className='text-white px-2 py-2 rounded-lg mr-24'>
