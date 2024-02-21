@@ -1,12 +1,25 @@
-import React from 'react'
-import Carrito from '../../public/img/carrito.png'
+import { Link } from "react-router-dom";
+import Carrito from "../../public/img/carrito.png";
 
 export const CartWidget = () => {
   return (
 
-    <a className='flex gap-1 fixed end-0 mr-12 bg-black rounded-lg   opacity-70 ' href="carrito">
-      <img className='w-10 invert sm:mr-4 mr-0 ' src={Carrito} alt="carrito" />
-      <span className='bg-blue-700 text-white rounded-lg h-6 px-2 mr-4'>0
-      </span></a>
-  )
-}
+    <>
+    <Link to = {'/carrito'}>
+
+
+    <button
+      className="flex gap-1 fixed end-0 top-5 md:top-3 sm:top-4 mr-10 sm:mr-8 bg-black rounded-lg  opacity-70 "
+      
+    >
+      <img className="w-8 sm:w-10 invert sm:mr-4 mr-0 " src={Carrito} alt="carrito" />
+      <span className="bg-blue-700 text-white text-center rounded-lg h-6 px-2 mr-6 mt-1">0</span>
+    </button>
+    
+    
+    </Link>
+
+    </>
+
+  );
+};

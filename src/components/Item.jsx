@@ -1,16 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export const Item = ({ prod }) => {
   const [iconNombre, setIconNombre] = useState("heart-outline");
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => (count < prod.stock ? setCount(count +1): count);
-  const handleDecrement = () => (count > 0 ? setCount(count - 1) : count);
-  const agregarCarrito = `mb-4 disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[75%] w-[55%] text-[12px] text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
-    count == 0 ? "block" : "hidden"
-  }`;
-  const cargadoCarrito = `text-white container m-auto mb-6 mt-3 ${
-    count === 0 ? "hidden" : "block"
-  }`;
+
   const onToggleFavorite = () => {
     const nuevoFavorito =
       iconNombre === "heart-outline" ? "heart" : "heart-outline";
@@ -46,12 +40,14 @@ export const Item = ({ prod }) => {
     ) : prod.stock <= 3 ? (
       <span className="text-red-500 font-bold">¡Últimas unidades!</span>
     ) : (
-      <p className="text-end text-blue-400">Stock: {prod.stock}</p>
+      <p className="text-center text-blue-400">Stock: {prod.stock}</p>
     );
   return (
     <>
+
       <section className="bg-[#313131] w-40 flex flex-col justify-between m-8 rounded sm:w-52 border-[1px] ">
-        <picture className=" ">
+      <Link to = {`/producto/${prod.id}`}>
+      <picture className=" ">
           <img
             className="object-cover aspect-[.7]"
             src={`../img/${prod.img}`}
@@ -67,14 +63,12 @@ export const Item = ({ prod }) => {
           ))}
         </div>
         <div className="m-2">
-          <p className="text-left text-wrap lg:contents hidden flex-1">
-            {prod.descripcion}
-          </p>
-          <div className="text-center mt-2">{stock}</div>
+          <div className="text-center">{stock}</div>
         </div>
+        </Link>
         <div className="flex flex-col m-2">
           <span className="">{promocionActiva}</span>
-          <span className="mb-4 ml-4 flex justify-between items-center">
+          <span className="mb-4 ml-4 flex justify-between items-center"> 
             {aplicandoPromocion}{" "}
             <button onClick={onToggleFavorite}>
               <ion-icon
@@ -83,31 +77,9 @@ export const Item = ({ prod }) => {
               ></ion-icon>
             </button>
           </span>
-          <button
-            disabled={prod.stock === 0}
-            className={agregarCarrito}
-            onClick={handleIncrement}
-          >
-            Agregar al carrito
-          </button>
-          <section className={cargadoCarrito}>
-            <div className="flex items-center justify-center space-x-4">
-              <button
-                className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded"
-                onClick={handleDecrement}
-              >
-                -
-              </button>
-              <span className="text-xl font-bold">{count}</span>
-              <button
-                className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded"
-                onClick={handleIncrement}
-              >
-                +
-              </button>
-            </div>
-          </section>
-        </div>
+          </div>
+ 
+
       </section>
     </>
   );

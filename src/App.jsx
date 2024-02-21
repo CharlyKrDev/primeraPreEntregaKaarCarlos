@@ -22,7 +22,7 @@ export const App = () => {
           <Route path='/' element ={ <LandingPage /> } />
           <Route path='/tienda' element ={ <ItemListContainer /> } />
           <Route path='/categoria/:cid' element = { <ItemListContainer /> }/>
-          <Route path='/productos/:pid' element = { <ItemDetailsContainer /> } />
+          <Route path='/producto/:pid' element = { <ItemDetailsContainer /> } />
           <Route path='/carrito' element ={ <Cart /> }/>
           <Route path='/checkout' element ={ <Checkout /> } />
           <Route path='*' element ={ <NotFound /> } />
