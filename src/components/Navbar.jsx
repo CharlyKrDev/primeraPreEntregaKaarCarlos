@@ -11,6 +11,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const tiendaWeb = "/tienda";
 
+
   const onToggleMenu = () => {
     const newIconName = iconName === "menu" ? "close" : "menu";
     setIconName(newIconName);
@@ -18,7 +19,7 @@ export const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   const menuClass = `duration-500 md:static absolute bg-black opacity-80 md:min-h-fit min-h-[60vh] left-0 ${
-    menuOpen ? "top-[9%]" : "top-[-100%]"
+    menuOpen ? "sm:top-[7%] top-[9%]" : "top-[-100%]"
   } md:w-auto flex items-center px-5 w-full z-10`;
   const menuGeneral = `active:scale-95 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
 
@@ -56,9 +57,13 @@ export const Navbar = () => {
             <li className="text-white px-2 py-2 rounded-lg mr-24"></li>
           </ul>
         </div>
+
         <CartWidget />
+
+
         <div className="flex items-center gap-6">
           <ion-icon
+            
             onClick={onToggleMenu}
             name={iconName}
             class="cursor-pointer mr-4 text-3xl md:hidden "

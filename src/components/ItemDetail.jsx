@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({ juego }) => {
   const [contador, setContador] = useState(0);
@@ -6,7 +7,9 @@ export const ItemDetail = ({ juego }) => {
     contador < juego.stock ? setContador(contador + 1) : contador;
   const decrementarContador = () =>
     contador > 0 ? setContador(contador - 1) : contador;
-  const borrar =()=>{setContador(0)}
+  const borrar = () => {
+    setContador(0);
+  };
   const agregarCarrito = `disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[45%] w-[75%] sm:text-[13px] text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
     contador == 0 ? "block" : "hidden"
   }`;
@@ -45,9 +48,16 @@ export const ItemDetail = ({ juego }) => {
     );
 
   return (
-    <section className="bg-[#313131] border-2 border-sky-100 opacity-80 h-[100%] rounded-lg max-w-[50%] m-auto">
-      <div className="flex h-[5%] rounded-lg">
-        <h2 className="text-white text-lg font-bold text-center m-auto">{juego.nombre}</h2>
+    <section className="bg-[#313131] border-2 border-sky-100 h-[100%] rounded-lg max-w-[50%] m-auto">
+      <div className="flex h-[5%] w-[100%] rounded-lg">
+        <h2 className="text-white text-lg font-bold text-center m-auto">
+          {juego.nombre}
+        </h2>
+        <Link to={"/tienda"}>
+          <button className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl">
+            <ion-icon name="close">Comprar</ion-icon>
+          </button>
+        </Link>
       </div>
       <div className="h-[40%]">
         <img
@@ -63,15 +73,17 @@ export const ItemDetail = ({ juego }) => {
           </p>
           <h3 className="text-center mt-2">{stock}</h3>
           <div className="flex flex-col items-center">
-          <span className="mb-4 ml-4 flex justify-between items-center">
-            {aplicandoPromocion}
-          </span>
-          <span className="">{promocionActiva}<p>Precio total: ${precioConDescuento * contador}</p></span>
+            <span className="mb-4 ml-4 flex justify-between items-center">
+              {aplicandoPromocion}
+            </span>
+            <span className="">
+              {promocionActiva}
+              <p>Precio total: ${precioConDescuento * contador}</p>
+            </span>
           </div>
-
         </div>
         <div className="sm:h-[50%] h-[20%] flex rounded-lg">
-    <button
+          <button
             disabled={juego.stock === 0}
             className={agregarCarrito}
             onClick={incrementarContador}
@@ -79,7 +91,6 @@ export const ItemDetail = ({ juego }) => {
             Agregar al carrito
           </button>
 
-  
           <section className={cargadoCarrito}>
             <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-4 flex-wrap">
               <button
@@ -95,9 +106,17 @@ export const ItemDetail = ({ juego }) => {
               >
                 +
               </button>
-              <button onClick={borrar} className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl"><ion-icon name="trash-outline">Borrar</ion-icon></button>
-              <button  className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-2xl"><ion-icon name="cash-outline">Comprar</ion-icon></button>
-
+              <button
+                onClick={borrar}
+                className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl"
+              >
+                <ion-icon name="trash-outline">Borrar</ion-icon>
+              </button>
+              <Link to={"/checkout"}>
+                <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-2xl">
+                  <ion-icon name="cash-outline">Comprar</ion-icon>
+                </button>
+              </Link>
             </div>
           </section>
         </div>

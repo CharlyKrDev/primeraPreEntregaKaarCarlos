@@ -29,7 +29,7 @@ export const ItemDetailsContainer = () => {
 
   return (
 <main className="h-[80.3vh] w-full flex">
-<section className="flex m-auto justify-center justify-items-center items-center bg-black bg-opacity-50 h-[60vh]">
+<section className="flex m-auto justify-center justify-items-center items-center bg-black bg-opacity-50 h-[60vh] w-[100vh]">
     <ItemDetail juego ={juego}/>
     </section>
 </main>
