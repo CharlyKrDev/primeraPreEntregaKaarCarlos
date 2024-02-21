@@ -28,8 +28,10 @@ export const ItemDetailsContainer = () => {
 }, [pid]);
 
   return (
-    <div className="mt-10 ustify-items-center items-center bg-black bg-opacity-50">
+<main className="h-[80.3vh] w-full flex">
+<section className="flex m-auto justify-center justify-items-center items-center bg-black bg-opacity-50 h-[60vh]">
     <ItemDetail juego ={juego}/>
-    </div>
+    </section>
+</main>
   );
 };

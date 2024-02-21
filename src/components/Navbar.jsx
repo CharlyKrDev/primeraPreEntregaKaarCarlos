@@ -19,7 +19,7 @@ export const Navbar = () => {
   };
   const menuClass = `duration-500 md:static absolute bg-black opacity-80 md:min-h-fit min-h-[60vh] left-0 ${
     menuOpen ? "top-[9%]" : "top-[-100%]"
-  } md:w-auto flex items-center px-5 w-full`;
+  } md:w-auto flex items-center px-5 w-full z-10`;
   const menuGeneral = `active:scale-95 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
 
   return (
@@ -39,8 +39,10 @@ export const Navbar = () => {
                 <button className={menuGeneral}>Tienda</button>
               </Link>
             </li>
-
+            <li>
             <Categorias />
+
+            </li>
             <li>
               <Link to={"/comunidad"}>
                 <button className={menuGeneral}>Comunidad</button>
