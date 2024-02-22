@@ -8,19 +8,19 @@ const formularioInput = "w-[90%] p-2 m-4 border rounded-md"
 
     <main className="w-[90%] h-[100vh]  m-auto text-black">
         <section className="h-[100%] w-[100% flex flex-col ">
-            <div className="sm:h-[25%] h-[auto] w-[100%] flex  p-2 text-white gap-2 bg-[#323232] rounded-full mt-8">
-                <div className="h-[100%] w-[33.33%]  flex flex-col rounded-full border-2 border-blue-700 p-2 bg-green-600">
-                    <h3 className="pl-4 font-bold">Paso 1:</h3>
+            <div className="sm:h-[25%] h-[auto] w-[100%] flex  p-2 text-white gap-2 bg-[#323232] rounded-3xl sm:rounded-full mt-8">
+                <div className="h-[100%] w-[33.33%]  flex flex-col rounded-3xl sm:rounded-full border-2 border-blue-700 p-2 bg-green-600">
+                    <h3 className="text-center font-bold">Paso 1:</h3>
                     <p className= {indicaciones}>Seleccionar los juegos deseados y agrégalos al carrito.</p>
                 </div>
-                <div className="h-[100%] w-[33.33%]  flex flex-col rounded-full border-2 border-blue-700 p-2 bg-yellow-600 ">
-                <h3 className="pl-4 font-bold">Paso 2:</h3>
+                <div className="h-[100%] w-[33.33%]  flex flex-col sm:rounded-full rounded-3xl border-2 border-blue-700 p-2 bg-yellow-600 ">
+                <h3 className="text-center font-bold">Paso 2:</h3>
                 <p className={indicaciones}>Completar los datos en el formulario e informar el código de gestión.</p>
 
 
                 </div>
-                <div className="h-[100%] w-[33.33%]  flex flex-col rounded-full border-2 border-blue-700 p-2 bg-purple-600">
-                <h3 className="pl-4 font-bold">Paso 3:</h3>
+                <div className="h-[100%] w-[33.33%]  flex flex-col sm:rounded-full rounded-3xl border-2 border-blue-700 p-2 bg-purple-600">
+                <h3 className="text-center font-bold">Paso 3:</h3>
                 <p className={indicaciones}>Te vamos a estar contactando en la brevedad para finalizar la operación, en un periodo no mayor a las 72hrs hábiles.</p>
 
 
