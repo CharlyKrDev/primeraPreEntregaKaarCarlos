@@ -10,10 +10,10 @@ export const ItemDetail = ({ juego }) => {
   const borrar = () => {
     setContador(0);
   };
-  const agregarCarrito = `disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[45%] w-[75%] sm:text-[13px] text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
+  const agregarCarrito = `disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[45%] w-[85%] sm:text-[13px] text-sm text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
     contador == 0 ? "block" : "hidden"
   }`;
-  const cargadoCarrito = `text-white container sm:m-auto mb-6 mt-3 ${
+  const cargadoCarrito = `flex text-white container sm:m-auto mb-6 mt-3 ${
     contador === 0 ? "hidden" : "block"
   }`;
   const promocionActiva =
@@ -48,79 +48,84 @@ export const ItemDetail = ({ juego }) => {
     );
 
   return (
-    <section className="bg-[#313131] border-2 border-sky-100 h-[100%] rounded-lg max-w-[50%] m-auto">
-      <div className="flex h-[5%] w-[100%] rounded-lg">
-        <h2 className="text-white text-lg font-bold text-center m-auto">
-          {juego.nombre}
-        </h2>
-        <Link to={"/tienda"}>
-          <button className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl">
-            <ion-icon name="close">Comprar</ion-icon>
-          </button>
-        </Link>
-      </div>
-      <div className="h-[40%]">
-        <img
-          className="m-auto rounded-lg object-cover aspect-[.7] max-h-[100%]"
-          src={`../img/${juego.img}`}
-          alt=""
-        />
-      </div>
-      <div className="h-[55%] flex flex-col justify-between mb-1">
-        <div className="h-[50%]">
-          <p className="text-left text-wrap  flex-1 text-white mt-4 mx-4">
-            {juego.descripcion}
-          </p>
-          <h3 className="text-center mt-2">{stock}</h3>
-          <div className="flex flex-col items-center">
-            <span className="mb-4 ml-4 flex justify-between items-center">
-              {aplicandoPromocion}
-            </span>
-            <span className="">
-              {promocionActiva}
-              <p>Precio total: ${precioConDescuento * contador}</p>
-            </span>
+    <>
+      <div className="bg-[#313131] pt-2 pb-2 h-[100%]  min-w-[90%] rounded-lg border-4 border-sky-50">
+        <section className="h-[45%]  w-[100%]">
+          <div className="h-[15%] bg-[#535252] flex items-center justify-between mb-1">
+            <h3 className="text-center w-[70%] m-auto ">{juego.nombre}</h3>
+            <Link to={'/tienda'}>
+              <button className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-md mr-1">
+                <ion-icon name="close">Comprar</ion-icon>
+              </button>
+            </Link>
           </div>
-        </div>
-        <div className="sm:h-[50%] h-[20%] flex rounded-lg">
-          <button
-            disabled={juego.stock === 0}
-            className={agregarCarrito}
-            onClick={incrementarContador}
-          >
-            Agregar al carrito
-          </button>
-
-          <section className={cargadoCarrito}>
-            <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-4 flex-wrap">
-              <button
-                className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded"
-                onClick={decrementarContador}
-              >
-                -
-              </button>
-              <span className="text-xl font-bold">{contador}</span>
-              <button
-                className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded"
-                onClick={incrementarContador}
-              >
-                +
-              </button>
-              <button
-                onClick={borrar}
-                className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl"
-              >
-                <ion-icon name="trash-outline">Borrar</ion-icon>
-              </button>
-              <Link to={"/checkout"}>
-                <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-2xl">
-                  <ion-icon name="cash-outline">Comprar</ion-icon>
-                </button>
-              </Link>
+          <div className="h-[85%]">
+            <img
+              className="m-auto w-[90%] h-[100%] object-contain"
+              src={`../img/${juego.img}`}
+              alt="ss"
+            />
+          </div>
+        </section>
+        <section className="h-[55%]  w-[80%] m-auto ">
+          <div className="h-[60%] mt-8 flex flex-col justify-center">
+            <div className="flex flex-col items-center">
+              <p className="mx-2 my-2 text-left text-wrap text-white">
+                {juego.descripcion}
+              </p>
+              <h3 className="text-center text-sm mt-1">{stock}</h3>
             </div>
-          </section>
-        </div>
+            <div>
+              <div className="flex flex-col items-center">
+                <span className="m-1 text-m flex justify-between items-center">
+                  {aplicandoPromocion}
+                </span>
+                <span className="">
+                  {promocionActiva}
+                  <p>Precio total: ${precioConDescuento * contador}</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="h-[40%] m-auto flex">
+            <button
+              disabled={juego.stock === 0}
+              className={agregarCarrito}
+              onClick={incrementarContador}
+            >
+              Agregar al carrito
+            </button>
+            <section className={cargadoCarrito}>
+              <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-4 flex-wrap">
+                <button
+                  className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded"
+                  onClick={decrementarContador}
+                >
+                  -
+                </button>
+                <span className="text-xl font-bold">{contador}</span>
+                <button
+                  className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded"
+                  onClick={incrementarContador}
+                >
+                  +
+                </button>
+                <button
+                  onClick={borrar}
+                  className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl"
+                >
+                  <ion-icon name="trash-outline">Borrar</ion-icon>
+                </button>
+                <Link to={"/checkout"}>
+                  <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-2xl">
+                    <ion-icon name="cash-outline">Comprar</ion-icon>
+                  </button>
+                </Link>
+              </div>
+            </section>
+          </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 };

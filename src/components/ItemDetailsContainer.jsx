@@ -28,8 +28,8 @@ export const ItemDetailsContainer = () => {
 }, [pid]);
 
   return (
-<main className="h-[80.3vh] w-full flex">
-<section className="flex m-auto justify-center justify-items-center items-center bg-black bg-opacity-50 h-[60vh] w-[100vh]">
+<main className="sm:h-[82.3vh] h-[75vh] w-full flex">
+<section className="flex flex-col m-auto justify-center items-center bg-black bg-opacity-50 h-[90%] sm:w-[70%] w-[80%] rounded-lg">
     <ItemDetail juego ={juego}/>
     </section>
 </main>
