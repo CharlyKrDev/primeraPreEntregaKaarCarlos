@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export const ItemDetail = ({ juego }) => {
   const [contador, setContador] = useState(0);
@@ -9,6 +10,16 @@ export const ItemDetail = ({ juego }) => {
     contador > 0 ? setContador(contador - 1) : contador;
   const borrar = () => {
     setContador(0);
+  };
+
+  const handleSubmit = () => {
+    const codigoAleatorio = Math.random().toString(36).substring(2);
+    Swal.fire({
+      title: "Reserva realizada!",
+      text: `Complete el formulario para ser contactado y cargue el código: ${codigoAleatorio} `,
+      icon: "success",
+      confirmButtonText: "Confirmar",
+    });
   };
 
   const agregarCarrito = `disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[45%] w-[85%] sm:text-[13px] text-sm text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
@@ -38,8 +49,10 @@ export const ItemDetail = ({ juego }) => {
         ${juego.precioVigente}
       </span>
     );
-    const precioTotal = juego.promocion === true ? (contador * precioConDescuento) : (juego.precioVigente*contador);
-
+  const precioTotal =
+    juego.promocion === true
+      ? contador * precioConDescuento
+      : juego.precioVigente * contador;
 
   const stock =
     juego.stock === 0 ? (
@@ -56,7 +69,7 @@ export const ItemDetail = ({ juego }) => {
         <section className="h-[45%]  w-[100%]">
           <div className="h-[15%] bg-[#535252] flex items-center justify-between mb-1">
             <h3 className="text-center w-[70%] m-auto ">{juego.nombre}</h3>
-            <Link to={'/tienda'}>
+            <Link to={"/tienda"}>
               <button className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-md mr-1">
                 <ion-icon name="close">Comprar</ion-icon>
               </button>
@@ -120,7 +133,10 @@ export const ItemDetail = ({ juego }) => {
                   <ion-icon name="trash-outline">Borrar</ion-icon>
                 </button>
                 <Link to={"/checkout"}>
-                  <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-xl mr-2">
+                  <button
+                    onClick={handleSubmit}
+                    className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-xl mr-2"
+                  >
                     <ion-icon name="cash-outline">Comprar</ion-icon>
                   </button>
                 </Link>

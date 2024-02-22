@@ -1,9 +1,8 @@
-import WorkInProgress from "../../public/img/work-in-progress.jpg"
-
 export const Checkout = () => {
 const indicaciones = "text-center m-auto text-wrap text-sm font-bold"
 const formularioLabel = "block mb-2 text-white"
 const formularioInput = "w-[90%] p-2 m-4 border rounded-md"
+
     return (
 
 
@@ -33,7 +32,7 @@ const formularioInput = "w-[90%] p-2 m-4 border rounded-md"
                     <h2 className="text-wrap text-center pt-2 pb-2 font-bold">Complete el siguiente formulario para finalizar la compra</h2>
                     <div className="max-w-md mx-auto p-6 bg-[#242424] rounded-lg border-blue-700 border-2 ">
 
-                    <form action="">
+                    <form  action="">
                         <label className={formularioLabel}>Nombres:</label>
                         <input type='text' required className={formularioInput}></input>
                         <label className={formularioLabel}>Apellido: </label>
@@ -48,7 +47,7 @@ const formularioInput = "w-[90%] p-2 m-4 border rounded-md"
                         <input type='number' required className={formularioInput}></input>
                         <label className={formularioLabel}>Código de gestión: </label>
                         <input type='text' required className={formularioInput}></input>
-                        <button type="submit" className="active:scale-95 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Enviar</button>
+                        <button type="submit" className="m-auto active:scale-95 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center">Enviar</button>
                         
                     </form>
 
