@@ -10,6 +10,7 @@ export const ItemDetail = ({ juego }) => {
   const borrar = () => {
     setContador(0);
   };
+
   const agregarCarrito = `disabled:pointer-events-none disabled:opacity-65  bg-blue-700 sm:w-[45%] w-[85%] sm:text-[13px] text-sm text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700  ${
     contador == 0 ? "block" : "hidden"
   }`;
@@ -37,6 +38,8 @@ export const ItemDetail = ({ juego }) => {
         ${juego.precioVigente}
       </span>
     );
+    const precioTotal = juego.promocion === true ? (contador * precioConDescuento) : (juego.precioVigente*contador);
+
 
   const stock =
     juego.stock === 0 ? (
@@ -82,7 +85,7 @@ export const ItemDetail = ({ juego }) => {
                 </span>
                 <span className="">
                   {promocionActiva}
-                  <p>Precio total: ${precioConDescuento * contador}</p>
+                  <p>Precio total: ${precioTotal}</p>
                 </span>
               </div>
             </div>
