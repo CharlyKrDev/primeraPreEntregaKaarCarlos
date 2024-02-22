@@ -99,28 +99,28 @@ export const ItemDetail = ({ juego }) => {
               Agregar al carrito
             </button>
             <section className={cargadoCarrito}>
-              <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-4 flex-wrap">
+              <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-4 w-[100%]">
                 <button
-                  className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded"
+                  className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded mx-2 my-6"
                   onClick={decrementarContador}
                 >
                   -
                 </button>
                 <span className="text-xl font-bold">{contador}</span>
                 <button
-                  className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded"
+                  className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded "
                   onClick={incrementarContador}
                 >
                   +
                 </button>
                 <button
                   onClick={borrar}
-                  className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-2xl"
+                  className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-xl"
                 >
                   <ion-icon name="trash-outline">Borrar</ion-icon>
                 </button>
                 <Link to={"/checkout"}>
-                  <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-2xl">
+                  <button className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-xl mr-2">
                     <ion-icon name="cash-outline">Comprar</ion-icon>
                   </button>
                 </Link>

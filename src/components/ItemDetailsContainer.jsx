@@ -28,7 +28,7 @@ export const ItemDetailsContainer = () => {
 }, [pid]);
 
   return (
-<main className="sm:h-[82.3vh] h-[75vh] w-full flex">
+<main className="sm:h-[82.3vh] h-auto min-h-[75vh] w-full flex">
 <section className="flex flex-col m-auto justify-center items-center bg-black bg-opacity-50 h-[90%]  w-[auto] max-w-[50%] rounded-lg">
     <ItemDetail juego ={juego}/>
     </section>
