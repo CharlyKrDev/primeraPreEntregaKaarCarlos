@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export const Categorias = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const closeTimeoutRef = useRef(null);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+
+  const openDropdown = () => {
+    clearTimeout(closeTimeoutRef.current);
+    setIsOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 200); // Esperar 200 milisegundos antes de cerrar
   };
 
   return (
     <div className="relative">
       <button
         id="dropdownDefaultButton"
-        onClick={toggleDropdown}
+        onMouseEnter={openDropdown}
+        onMouseLeave={closeDropdown}
         className="text-white w-full bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
@@ -36,7 +46,11 @@ export const Categorias = () => {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700  max-w-[100%]">
+        <div
+          className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700  max-w-[100%]"
+          onMouseEnter={openDropdown}
+          onMouseLeave={closeDropdown}
+        >
           <ul
             className="py-2 text-sm text-gray-700 dark:text-gray-200"
             aria-labelledby="dropdownDefaultButton"

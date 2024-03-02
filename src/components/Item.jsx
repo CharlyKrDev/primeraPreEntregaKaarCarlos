@@ -1,16 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useFavorito } from "../hooks/useFavorito";
+
 
 
 export const Item = ({ prod }) => {
-  const [iconNombre, setIconNombre] = useState("heart-outline");
+  const { iconNombre, agregarFavorito } = useFavorito("heart-outline");
 
-  const onToggleFavorite = () => {
-    const nuevoFavorito =
-      iconNombre === "heart-outline" ? "heart" : "heart-outline";
-    console.log(nuevoFavorito);
-    setIconNombre(nuevoFavorito);
-  };
   const botonCategoria =
     "m-2  rounded-md bg-[#313131] border-[1px] sm:p-2 p-1 border-white sm:text-sm focus:outline-none focus:border-none focus:ring focus:ring-green-500 text-[12px] transition duration-300 ease-out hover:bg-green-200 hover:text-black hover:font-bold hover:ease-in";
   const promocionActiva =
@@ -70,7 +66,7 @@ export const Item = ({ prod }) => {
           <span className="">{promocionActiva}</span>
           <span className="mb-4 ml-4 flex justify-between items-center"> 
             {aplicandoPromocion}{" "}
-            <button onClick={onToggleFavorite}>
+            <button onClick={agregarFavorito}>
               <ion-icon
                 class="mr-4 text-[28px] text-pink-400 text-center pt-2"
                 name={iconNombre}

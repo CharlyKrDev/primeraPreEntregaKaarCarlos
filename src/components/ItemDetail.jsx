@@ -1,18 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useContador } from "../Hooks/useCounter";
+
 
 export const ItemDetail = ({ juego }) => {
-  const [contador, setContador] = useState(0);
-  const incrementarContador = () =>
-    contador < juego.stock ? setContador(contador + 1) : contador;
-  const decrementarContador = () =>
-    contador > 0 ? setContador(contador - 1) : contador;
-  const borrar = () => {
-    setContador(0);
-  };
+  const { contador, incrementarContador, decrementarContador, reiniciarContador } = useContador (0, juego.stock, 1)
 
-  const handleSubmit = () => {
+
+  const finalizarCarrito = () => {
     const codigoAleatorio = Math.random().toString(36).substring(2);
     Swal.fire({
       title: "Reserva realizada!",
@@ -127,14 +123,14 @@ export const ItemDetail = ({ juego }) => {
                   +
                 </button>
                 <button
-                  onClick={borrar}
+                  onClick={reiniciarContador}
                   className="active:scale-95 bg-red-800 rounded-lg text-center p-1 flex text-xl"
                 >
                   <ion-icon name="trash-outline">Borrar</ion-icon>
                 </button>
                 <Link to={"/checkout"}>
                   <button
-                    onClick={handleSubmit}
+                    onClick={finalizarCarrito}
                     className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-xl mr-2"
                   >
                     <ion-icon name="cash-outline">Comprar</ion-icon>
