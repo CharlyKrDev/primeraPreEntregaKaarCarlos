@@ -1,42 +1,35 @@
-import './styles/App.css'
-import { Navbar } from './components/Navbar'
-import { LandingPage } from './components/LandingPage'
-import { ItemListContainer } from './components/ItemListContainer'
-import { Footer } from './components/Footer'
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import { Cart } from './components/Cart'
-import { Checkout } from './components/Checkout'
-import { ItemDetailsContainer } from './components/ItemDetailsContainer'
-import { NotFound } from './components/NotFound'
-
-
+import "./styles/App.css";
+import { Navbar } from "./components/Navbar";
+import { LandingPage } from "./components/LandingPage";
+import { ItemListContainer } from "./components/ItemListContainer";
+import { Footer } from "./components/Footer";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Cart } from "./components/Cart";
+import { Checkout } from "./components/Checkout";
+import { ItemDetailsContainer } from "./components/ItemDetailsContainer";
+import { NotFound } from "./components/NotFound";
+import { CarritoProvider } from "./context/CartContext";
 
 export const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <CarritoProvider>
+          <Navbar />
 
-        <Routes>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/tienda" element={<ItemListContainer />} />
+            <Route path="/categoria/:cid" element={<ItemListContainer />} />
+            <Route path="/producto/:pid" element={<ItemDetailsContainer />} />
+            <Route path="/carrito" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-          <Route path='/' element ={ <LandingPage /> } />
-          <Route path='/tienda' element ={ <ItemListContainer /> } />
-          <Route path='/categoria/:cid' element = { <ItemListContainer /> }/>
-          <Route path='/producto/:pid' element = { <ItemDetailsContainer /> } />
-          <Route path='/carrito' element ={ <Cart /> }/>
-          <Route path='/checkout' element ={ <Checkout /> } />
-          <Route path='*' element ={ <NotFound /> } />
-
-
-        </Routes>
-
-
-        <Footer />
-
+          <Footer />
+        </CarritoProvider>
       </BrowserRouter>
-
-
-
     </>
-  )
-}
+  );
+};

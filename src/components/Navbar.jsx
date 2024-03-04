@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CartWidget } from "./CartWidget";
-import { SearchInput } from "./SearchInput";
 import Logo from "../../public/img/logo.jpg";
 import Ecommerce from "../../public/img/eCommerce.svg";
 import { Categorias } from "./Categorias";

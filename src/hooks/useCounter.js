@@ -11,7 +11,7 @@ export const useContador = (valorMinimo = 0, valorMax = 1, step = 1) =>{
 
     }
     const decrementarContador = () =>{
-        if( contador >= valorMinimo){
+        if( contador > valorMinimo){
             setContador( contador - step)
         }
 

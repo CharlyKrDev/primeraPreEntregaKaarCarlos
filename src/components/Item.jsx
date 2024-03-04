@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFavorito } from "../hooks/useFavorito";
+import { useFavorito } from "../hooks/useFavorito.js";
 
 
 
@@ -16,18 +16,18 @@ export const Item = ({ prod }) => {
       ""
     );
   const precioConDescuento =
-    prod.precioVigente - (prod.precioVigente * prod.descuento) / 100;
+    prod.precio - (prod.precio * prod.descuento) / 100;
   const aplicandoPromocion =
     prod.promocion === true ? (
       <span className="text-green-400 mr-1 font-bold text-[16px] duration-200 ease-in-out hover:text-[20px] ">
         <span className="text-[14px] text-red-400 line-through mr-1">
-          ${prod.precioVigente}
+          ${prod.precio}
         </span>
         ${precioConDescuento}
       </span>
     ) : (
       <span className="duration-200 ease-in-out hover:text-[20px] text-gray-300 hover:text-white hover:font-bold">
-        ${prod.precioVigente}
+        ${prod.precio}
       </span>
     );
   const stock =
