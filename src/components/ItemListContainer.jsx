@@ -37,13 +37,13 @@ export const ItemListContainer = () => {
     return (
 
         <>
-            <section className="min-h-[80.7vh]">
+            <section className="min-h-[100vh]">
                 <h2 id='tienda' className="m-4 ml-12 text-[30px]">Tienda</h2>
-                <div className='flex flex-wrap justify-center gap-2 m-auto w-[100%] sm:mb-20 mb-32'>
+                <div className='flex flex-wrap justify-center gap-2 m-auto w-[100%] h-[100%] pb-12'>
 
 
 
-                    <ItemList productos={producto} />
+                    <ItemList productos={producto} plantilla='Item' />
 
                 </div>
             </section>

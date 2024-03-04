@@ -16,7 +16,7 @@ export const Item = ({ prod }) => {
       ""
     );
   const precioConDescuento =
-    prod.precio - (prod.precio * prod.descuento) / 100;
+   (prod.precio * prod.descuento);
   const aplicandoPromocion =
     prod.promocion === true ? (
       <span className="text-green-400 mr-1 font-bold text-[16px] duration-200 ease-in-out hover:text-[20px] ">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export const useContador = (valorMinimo = 0, valorMax = 1, step = 1) =>{
+export const useContador = (valorMinimo = 1, valorMax = 1, step = 1) =>{
     const [ contador, setContador] = useState(valorMinimo)
 
     const incrementarContador = ()=>{

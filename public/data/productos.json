@@ -7,7 +7,7 @@
         "descripcion": "El clásico juego de Mario Bros lanzado en 1983 remasterizado para pc.",
         "categoria":["switch"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 2
     },
     {
@@ -18,7 +18,7 @@
         "descripcion": "Es un juego de estrategia en tiempo real ambientado en la edad media.",
         "categoria":["pc"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 0
     },
     {
@@ -29,7 +29,7 @@
         "descripcion": "Es un juego de rol multijugador masivo en línea.",
         "categoria":["pc"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 10
         
     },
@@ -41,7 +41,7 @@
         "descripcion": "Oblivion nos trae una propuesta de mundo abierto.",
         "categoria":["ps5", "pc"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 9
     },
     {
@@ -52,7 +52,7 @@
         "descripcion": "RPG de acción y aventura  ambientado en el futuro.",
         "categoria":["ps5", "pc"],
         "promocion": true,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 32
     },
     {
@@ -63,7 +63,7 @@
         "descripcion": "Remake del clásico Resident Evil 4, un excelente juego de terror.",
         "categoria":["ps5", "pc", "switch"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 11
     },
     {
@@ -74,7 +74,7 @@
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en un mundo mágico.",
         "categoria":["ps5", "pc", "switch"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 5
     },
     {
@@ -85,7 +85,7 @@
         "descripcion": "Alan Wake es un videojuego de acción-aventura y terror psicológico.",
         "categoria":["ps5", "pc", "switch"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 6
     },
     {
@@ -96,7 +96,7 @@
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
         "categoria":["ps5", "pc", "switch"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 8
     },
     {
@@ -107,7 +107,7 @@
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
         "categoria":["ps5", "pc"],
         "promocion": true,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 3
     },
     {
@@ -118,7 +118,7 @@
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el viejo oeste.",
         "categoria":["ps5", "pc"],
         "promocion": false,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 43
     },
     {
@@ -129,7 +129,7 @@
         "descripcion": "EA Sports FC 24​ es un videojuego de fútbol, desarrollado por EA.",
         "categoria":["ps5", "pc"],
         "promocion": true,
-        "descuento":10,
+        "descuento":0.9,
         "stock": 54
     }
 ]

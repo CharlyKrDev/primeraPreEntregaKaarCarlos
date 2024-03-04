@@ -6,31 +6,31 @@ import { ItemDetail } from "./ItemDetail";
 
 
 export const ItemDetailsContainer = () => {
-  const [juego, setJuego]  = useState([]);
+  const [producto, setProducto]  = useState([]);
 
   const { pid } = useParams();
 
   useEffect(() => {
-    const obtenerJuego = async () => {
+    const obtenerproducto = async () => {
       try {
         const respuesta = await fetch("../data/productos.json");
         const resultado = await respuesta.json();
-        const juegoFiltrado = resultado.find((resp) => resp.id == pid);
-        if (juegoFiltrado) {
-          setJuego(juegoFiltrado);
-          console.log(juegoFiltrado);
+        const productoFiltrado = resultado.find((resp) => resp.id == pid);
+        if (productoFiltrado) {
+          setProducto(productoFiltrado);
+          console.log(productoFiltrado);
         }
       } catch (error) {
         console.log(error);
       }
     };
-    obtenerJuego();
+    obtenerproducto();
 }, [pid]);
 
   return (
-<main className="sm:h-[82.3vh] h-auto min-h-[75vh] w-full flex sm:mb-0 mb-36">
+<main className="sm:h-[82.3vh] h-auto min-h-[75vh] w-full flex pb-20">
 <section className="flex flex-col m-auto justify-center items-center bg-black bg-opacity-50 h-[90%]  w-[auto] max-w-[50%] rounded-lg">
-    <ItemDetail juego ={juego}/>
+    <ItemDetail producto ={producto}/>
     </section>
 </main>
   );

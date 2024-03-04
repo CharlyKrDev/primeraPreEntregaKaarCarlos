@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
-import WorkInProgress from "../../public/img/work-in-progress.jpg";
 import { useCarritoContext } from "../context/CartContext";
+import { ItemList } from "./ItemList";
+import Swal from "sweetalert2";
 
 export const Cart = () => {
   const { carrito, vaciarCarrito, precioTotalDeCompra } = useCarritoContext();
+  const finalizarCarrito = () => {
+    const codigoAleatorio = Math.random().toString(36).substring(2);
+    Swal.fire({
+      title: "Reserva realizada!",
+      text: `Complete el formulario para ser contactado y cargue el código: ${codigoAleatorio} `,
+      icon: "success",
+      confirmButtonText: "Confirmar",
+    });
+  };
+  const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
+  const botoneraCarritoFinalizar = `active:scale-95 text-white bg-blue-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
+  const botoneraCarritoComprar = `active:scale-95 text-white bg-blue-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
+
+
+
   return (
     <>
       {carrito.length === 0 ? (
@@ -19,7 +35,25 @@ export const Cart = () => {
         </>
       ) : (
         <>
-          <h1>Carrito lleno</h1>
+          <main className="h-auto bg-[#323232] w-[100%]">
+            <section className=" flex flex-col m-auto h-auto">
+              {<ItemList productos={carrito} plantilla="ItemCart" />}
+            </section>
+            <div className="h-[20%] pb-20  flex flex-col items-center mt-10">
+              <h3>Resumen de la compra</h3>
+              <p className="text-3xl mt-2">Total: $ {precioTotalDeCompra()}</p>
+
+              <div className="flex gap-4 mt-10 pb-4 m-2">
+                <button className={botoneraCarritoFinalizar} onClick={vaciarCarrito}>Vaciar carrito</button>
+                <Link to={"/"}>
+                  <button className={botoneraCarrito}>Continuar comprando</button>
+                </Link>
+                <Link to={"/checkout"}>
+                  <button className={botoneraCarritoComprar} onClick={finalizarCarrito}>Finalizar compra</button>
+                </Link>
+              </div>
+            </div>
+          </main> 
         </>
       )}
     </>

@@ -48,7 +48,7 @@ export const CarritoProvider = (props) => {
 
     const precioTotalDeCompra = () => {
 
-        return carrito.reduce((acum, prod) => acum += (prod.unidad * prod.precio), 0)
+        return carrito.reduce((acum, prod) => acum += (prod.promocion == true ? (prod.unidad * (prod.precio*prod.descuento)) : (prod.unidad * prod.precio)), 0)
     }
             console.log(carrito)
 
