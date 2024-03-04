@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useContador } from "../Hooks/useCounter";
+import { useContador } from "../hooks/useCounter.js";
 import { useCarritoContext } from "../context/CartContext";
 
 
