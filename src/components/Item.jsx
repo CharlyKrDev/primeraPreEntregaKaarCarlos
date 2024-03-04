@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFavorito } from "../hooks/useFavorito.js";
+import { useFavorito } from "../hooks/useFavorito";
 
 
 
