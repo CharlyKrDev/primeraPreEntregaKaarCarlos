@@ -1,4 +1,8 @@
 import { useRef } from "react"
+import { createOrdenCompra, getOrdenCompra, getProduct, updateProduct } from "../firebase/firebase"
+import { Link, useNavigate } from "react-router-dom"
+import { useCarritoContext } from "../context/CartContext"
+
 
 
 
@@ -7,14 +11,36 @@ const indicaciones = "text-center m-auto text-wrap text-sm font-bold"
 const formularioLabel = "block mb-2 text-white"
 const formularioInput = "w-[90%] p-2 m-4 border rounded-md"
 const formRef = useRef()
+const navigate = useNavigate()
+const {carrito, precioTotalDeCompra, vaciarCarrito } = useCarritoContext()
+
 const handleSubmit =(e)=>{ // estoy convirtiendo información html a un objeto iterator y luego a uno simple
     e.preventDefault()
-    console.log(formRef.current)
     const datForm = new FormData(formRef.current) // objeto iterator
-    console.log(datForm)
     const data = Object.fromEntries(datForm) // objeto iterator
-    console.log(data)
-    e.target.reset()
+ 
+    // Generar la orden de compra
+
+    //Modificar Stock
+    const aux =[...carrito] //genero una copia del carrito en aux por medio de spread, la idea es modificar este y no el original
+    aux.forEach(prodCarrito) =>{
+        getProduct(prodCarrito.id).then(prodDB =>{
+            if(prodDB.stock >= prodCarrito.unidad){
+                prodDB.stock -= prodCarrito.unidad
+                updateProduct(prodDB.id, prodDB)
+
+            } else{
+                console.log(`El stock del producto ${prodDB.nombre} no cuenta con stock suficiente`)
+                aux.filter(prod => prod.id != prodDB.id) //Elimino el producto del carrito que no tenga stock
+
+            }
+
+        })
+
+    }
+
+
+    e.target.reset() //resetea el formulario despues de ser usado.
 
 }
 

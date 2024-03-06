@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { CartWidget } from "./CartWidget";
-import Logo from "../../public/img/logo.jpg";
-import Ecommerce from "../../public/img/eCommerce.svg";
+import Logo from "../img/logo.jpg";
+import Ecommerce from "../img/eCommerce.svg";
 import { Categorias } from "./Categorias";
 import { Link } from "react-router-dom";
-
 export const Navbar = () => {
   const [nombreIcono, setNombreIcono] = useState("menu");
   const [menuDesplegado, setMenuDesplegado] = useState(false);
@@ -34,11 +33,10 @@ export const Navbar = () => {
       <nav className="flex justify-between items-center  m-auto">
         <Link to={"/"}>
           <button className="flex gap-1 items-center justify-center sm:ml-12 ml-6">
-            <img className="w-16 mt-0.5 invert" src={Ecommerce} alt="logo" />
+            <img className="w-16 mt-0.5 invert" src="https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/eCommerce.svg?alt=media&token=9f3ae9f6-b4e7-4688-85ba-c598137b7547" srcSet={Ecommerce} alt="logo" />
             <img
               className="w-16 pr-4 h-[9vh] sm:h-[7vh] m-auto"
-              src={Logo}
-              alt="logo"
+              src='https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/logo.jpg?alt=media&token=16928f16-85a0-42b4-ae9c-083ccc3617b2' srcSet={Logo}              alt="logo"
             />
           </button>
         </Link>

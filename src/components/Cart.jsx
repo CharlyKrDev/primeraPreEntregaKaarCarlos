@@ -14,7 +14,7 @@ export const Cart = () => {
       confirmButtonText: "Confirmar",
     });
   };
-  const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
+  const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center hover:scale-110 active:scale-95 ease-in-out transition-all`
   const botoneraCarritoFinalizar = `active:scale-95 text-white bg-blue-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
   const botoneraCarritoComprar = `active:scale-95 text-white bg-blue-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
 
@@ -43,9 +43,9 @@ export const Cart = () => {
               <h3>Resumen de la compra</h3>
               <p className="text-3xl mt-2">Total: $ {precioTotalDeCompra()}</p>
 
-              <div className="flex gap-4 mt-10 pb-4 m-2">
+              <div className="flex gap-4 mt-4 pb-2 m-2">
                 <button className={botoneraCarritoFinalizar} onClick={vaciarCarrito}>Vaciar carrito</button>
-                <Link to={"/"}>
+                <Link to={"/tienda"}>
                   <button className={botoneraCarrito}>Continuar comprando</button>
                 </Link>
                 <Link to={"/checkout"}>

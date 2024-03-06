@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useFavorito } from "../hooks/useFavorito.js";
 
-
-
 export const Item = ({ prod }) => {
   const { iconNombre, agregarFavorito } = useFavorito("heart-outline");
 
@@ -15,8 +13,7 @@ export const Item = ({ prod }) => {
     ) : (
       ""
     );
-  const precioConDescuento =
-   (prod.precio * prod.descuento);
+  const precioConDescuento = prod.precio * prod.descuento;
   const aplicandoPromocion =
     prod.promocion === true ? (
       <span className="text-green-400 mr-1 font-bold text-[16px] duration-200 ease-in-out hover:text-[20px] ">
@@ -40,31 +37,34 @@ export const Item = ({ prod }) => {
     );
   return (
     <>
-
       <section className="bg-[#313131] w-40 flex flex-col justify-between m-8 rounded sm:w-52 border-[1px]">
-      <Link to = {`/producto/${prod.id}`}>
-      <picture className=" ">
-          <img
-            className="object-cover aspect-[.7]"
-            src={`../img/${prod.img}`}
-            alt={`Imagen de ${prod.nombre}`}
-          />
-        </picture>
-        <dir className='p-0 w-[100%]'><h2 className=" text-md text-wrap text-center mr-2 ml-2 m-auto">{prod.nombre}</h2></dir>
-        <div className="text-right mb-2 ">
-          {prod.categoria.map((categoria, index) => (
-            <button key={index} className={botonCategoria}>
-              {categoria.toUpperCase()}
-            </button>
-          ))}
-        </div>
-        <div className="m-2">
-          <div className="text-center">{stock}</div>
-        </div>
+        <Link to={`/producto/${prod.id}`}>
+          <picture className=" ">
+            <img
+              className="object-cover aspect-[.7]"
+              src={`${prod.img}`}
+              alt={`Imagen de ${prod.nombre}`}
+            />
+          </picture>
+          <dir className="p-0 w-[100%]">
+            <h2 className=" text-md text-wrap text-center mr-2 ml-2 m-auto">
+              {prod.nombre}
+            </h2>
+          </dir>
+          <div className="text-right mb-2 ">
+            {prod.categoria.map((categoria, index) => (
+              <button key={index} className={botonCategoria}>
+                {categoria.toUpperCase()}
+              </button>
+            ))}
+          </div>
+          <div className="m-2">
+            <div className="text-center">{stock}</div>
+          </div>
         </Link>
         <div className="flex flex-col m-2">
           <span className="">{promocionActiva}</span>
-          <span className="mb-4 ml-4 flex justify-between items-center"> 
+          <span className="mb-4 ml-4 flex justify-between items-center">
             {aplicandoPromocion}{" "}
             <button onClick={agregarFavorito}>
               <ion-icon
@@ -73,9 +73,7 @@ export const Item = ({ prod }) => {
               ></ion-icon>
             </button>
           </span>
-          </div>
- 
-
+        </div>
       </section>
     </>
   );

@@ -1,8 +1,7 @@
 [
     {
-        "id": 1,
         "nombre": "Mario Bros",
-        "img": "1.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/1.webp?alt=media&token=100baa94-61f4-4f4c-9a75-3bde90947880",
         "precio": 99,
         "descripcion": "El clásico juego de Mario Bros lanzado en 1983 remasterizado para pc.",
         "categoria":["switch"],
@@ -11,9 +10,8 @@
         "stock": 2
     },
     {
-        "id": 2,
         "nombre": "Age of Empires II",
-        "img": "2.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/2.webp?alt=media&token=5920d103-530e-47f7-987f-09629252c487",
         "precio": 47,
         "descripcion": "Es un juego de estrategia en tiempo real ambientado en la edad media.",
         "categoria":["pc"],
@@ -22,9 +20,8 @@
         "stock": 0
     },
     {
-        "id": 3,
         "nombre": "Lineage 2",
-        "img": "3.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/3.webp?alt=media&token=ee9928c0-c5aa-458f-b020-8fc685a864f1",
         "precio": 50,
         "descripcion": "Es un juego de rol multijugador masivo en línea.",
         "categoria":["pc"],
@@ -34,9 +31,8 @@
         
     },
     {
-        "id": 4,
         "nombre": "The Elder Scrolls IV",
-        "img": "4.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/4.webp?alt=media&token=f06c3d21-7791-4a39-b62f-b685c6d1d207",
         "precio": 70,
         "descripcion": "Oblivion nos trae una propuesta de mundo abierto.",
         "categoria":["ps5", "pc"],
@@ -45,9 +41,8 @@
         "stock": 9
     },
     {
-        "id": 5,
         "nombre": "Cyberpunk 2077",
-        "img": "5.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/5.webp?alt=media&token=92df0129-e565-4ccd-894b-cfc2b3bc1a99",
         "precio": 125,
         "descripcion": "RPG de acción y aventura  ambientado en el futuro.",
         "categoria":["ps5", "pc"],
@@ -56,9 +51,8 @@
         "stock": 32
     },
     {
-        "id": 6,
         "nombre": "Resident Evil 4",
-        "img": "6.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/6.webp?alt=media&token=8d4c8d6b-ef82-439f-8459-dee706e0fead",
         "precio": 150,
         "descripcion": "Remake del clásico Resident Evil 4, un excelente juego de terror.",
         "categoria":["ps5", "pc", "switch"],
@@ -67,9 +61,8 @@
         "stock": 11
     },
     {
-        "id": 7,
         "nombre": "Hogwart Legacy",
-        "img": "7.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/7.webp?alt=media&token=d0e60755-9adb-47b6-8a93-a64e1e61180c",
         "precio": 80,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en un mundo mágico.",
         "categoria":["ps5", "pc", "switch"],
@@ -78,9 +71,8 @@
         "stock": 5
     },
     {
-        "id": 8,
         "nombre": "Alan Wake 2",
-        "img": "8.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/8.webp?alt=media&token=c41db487-c023-4828-b85e-59a12af41767",
         "precio": 45,
         "descripcion": "Alan Wake es un videojuego de acción-aventura y terror psicológico.",
         "categoria":["ps5", "pc", "switch"],
@@ -89,9 +81,8 @@
         "stock": 6
     },
     {
-        "id": 9,
         "nombre": "GTA VI - PreVenta",
-        "img": "9.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/9.webp?alt=media&token=abeb9b08-3c11-4212-8ffa-60391f02558f",
         "precio": 100,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
         "categoria":["ps5", "pc", "switch"],
@@ -100,9 +91,8 @@
         "stock": 8
     },
     {
-        "id": 10,
         "nombre": "Baldur`s Gate 3",
-        "img": "10.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/10.webp?alt=media&token=a41fd9b1-1a8f-4b83-9865-7d4d6d02d472",
         "precio": 155,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el futuro.",
         "categoria":["ps5", "pc"],
@@ -111,9 +101,8 @@
         "stock": 3
     },
     {
-        "id": 11,
         "nombre": "Red Dead Redemption 2",
-        "img": "11.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/11.webp?alt=media&token=d7ce996d-4105-489c-98bb-1f4cc5f4f121",
         "precio": 75,
         "descripcion": "RPG de acción y aventura de mundo abierto ambientado en el viejo oeste.",
         "categoria":["ps5", "pc"],
@@ -122,9 +111,8 @@
         "stock": 43
     },
     {
-        "id": 12,
         "nombre": "FC24",
-        "img": "12.webp",
+        "img": "https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/12.webp?alt=media&token=6e666ccf-8165-4c63-9370-e86deba8e4c6",
         "precio": 69,
         "descripcion": "EA Sports FC 24​ es un videojuego de fútbol, desarrollado por EA.",
         "categoria":["ps5", "pc"],

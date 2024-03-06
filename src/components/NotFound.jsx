@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const NotFound = () => {
   return (
-      <section className='flex flex-col h-[60.3vh] w-[40vh] sm:w-[60vh] justify-end items-center m-auto bg-[url("../../public/img/404.jpg")] bg-contain bg-no-repeat'>
+      <section className='flex flex-col h-[60.3vh] w-[40vh] sm:w-[60vh] justify-end items-center m-auto bg-[url("https://firebasestorage.googleapis.com/v0/b/proyecto-final-kaar-carlos.appspot.com/o/404.jpg?alt=media&token=1a7938db-7687-423a-ac48-2175cfd17e7e")] bg-contain bg-no-repeat'>
         <h2 className="bg-black opacity-80">Pagina NO ENCONTRADA ERROR: 404</h2>
 
         <Link to={"/"} >

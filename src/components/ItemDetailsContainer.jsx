@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
+import { getProduct } from "../firebase/firebase";
+
 
 
 
@@ -11,20 +13,18 @@ export const ItemDetailsContainer = () => {
   const { pid } = useParams();
 
   useEffect(() => {
-    const obtenerproducto = async () => {
+    const obtenerProducto = async () => {
       try {
-        const respuesta = await fetch("../data/productos.json");
-        const resultado = await respuesta.json();
-        const productoFiltrado = resultado.find((resp) => resp.id == pid);
-        if (productoFiltrado) {
-          setProducto(productoFiltrado);
-          console.log(productoFiltrado);
+        const respuesta = await getProduct(pid)
+        if (respuesta) {
+          setProducto(respuesta);
+          console.log(respuesta);
         }
       } catch (error) {
         console.log(error);
       }
     };
-    obtenerproducto();
+    obtenerProducto();
 }, [pid]);
 
   return (

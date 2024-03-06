@@ -3,27 +3,30 @@ import { Link } from "react-router-dom";
 import { useContador } from "../hooks/useCounter.js";
 import { useCarritoContext } from "../context/CartContext";
 
-
 export const ItemDetail = ({ producto }) => {
-  const { agregarProducto } = useCarritoContext()
-  const { contador, incrementarContador, decrementarContador, reiniciarContador } = useContador (0, producto.stock, 1)
-  
-  const sumarCarrito = () =>{
-    agregarProducto( producto, contador )
+  const { agregarProducto } = useCarritoContext();
+  const {
+    contador,
+    incrementarContador,
+    decrementarContador,
+    reiniciarContador,
+  } = useContador(0, producto.stock, 1);
 
-  }
+  const sumarCarrito = () => {
+    agregarProducto(producto, contador);
+  };
 
-
-  const agregarCarrito = "disabled:pointer-events-none disabled:opacity-65  bg-blue-700  w-[80%] sm:text-[13px] text-sm text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700";
-  const cargadoCarrito = "flex text-white container sm:m-auto mb-2 mt-2 h-[100%]";
+  const agregarCarrito =
+    "active:scale-95 ease-in-out transition-all disabled:pointer-events-none disabled:opacity-65  bg-blue-700  w-[80%] sm:text-[13px] text-sm text-semibold  active:scale-95  m-auto px-4 py-2 rounded-md hover:bg-green-700";
+  const cargadoCarrito =
+    "flex text-white container sm:m-auto mb-2 mt-2 h-[100%]";
   const promocionActiva =
     producto.promocion === true ? (
       <span className="text-green-400 text-[20px]">10% Desc</span>
     ) : (
       ""
     );
-  const precioConDescuento =
-     (producto.precio * producto.descuento);
+  const precioConDescuento = producto.precio * producto.descuento;
   const aplicandoPromocion =
     producto.promocion === true ? (
       <span className="text-green-400 mr-1 font-bold text-[16px] duration-200 ease-in-out hover:text-[20px] ">
@@ -48,7 +51,9 @@ export const ItemDetail = ({ producto }) => {
     ) : producto.stock <= 3 ? (
       <span className="text-red-500 font-bold">¡Últimas unidades!</span>
     ) : (
-      <p className="text-end text-blue-200 mr-4 mb-1">Stock: {producto.stock}</p>
+      <p className="text-end text-blue-200 mr-4 mb-1">
+        Stock: {producto.stock}
+      </p>
     );
 
   return (
@@ -66,7 +71,7 @@ export const ItemDetail = ({ producto }) => {
           <div className="h-[80%]">
             <img
               className="m-auto w-[90%] h-[100%] object-contain mt-4 aspect-[1]"
-              src={`../img/${producto.img}`}
+              src={`${producto.img}`}
               alt={`${producto.nombre}`}
             />
           </div>
@@ -92,7 +97,7 @@ export const ItemDetail = ({ producto }) => {
             </div>
           </div>
           <div className="h-[40%] m-auto flex w-[100%] flex-col">
-          <section className={cargadoCarrito}>
+            <section className={cargadoCarrito}>
               <div className="flex sm:h-[50%] m-auto items-center justify-center space-x-2 w-[100%]">
                 <button
                   className="bg-blue-700  active:scale-95  hover:bg-red-700 text-while px-4 rounded mx-2 my-6"
@@ -100,7 +105,7 @@ export const ItemDetail = ({ producto }) => {
                 >
                   -
                 </button>
-                <span className="text-xl font-bold">{contador}</span>
+                <span className="text-xl font-bold pr-2">{contador}</span>
                 <button
                   className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded "
                   onClick={incrementarContador}
@@ -124,17 +129,14 @@ export const ItemDetail = ({ producto }) => {
               </div>
             </section>
             <div className="h-[10%] w-[98%] flex mb-4 ml-1">
-            <button
-              disabled={producto.stock === 0}
-              className={agregarCarrito}
-              onClick={sumarCarrito}
-            >
-              Agregar al carrito
-            </button>
-
+              <button
+                disabled={contador === 0}
+                className={agregarCarrito}
+                onClick={sumarCarrito}
+              >
+                Agregar al carrito
+              </button>
             </div>
-
- 
           </div>
         </section>
       </div>

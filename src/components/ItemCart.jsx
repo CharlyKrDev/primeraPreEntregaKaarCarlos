@@ -29,7 +29,7 @@ export const ItemCart = ({ prod }) => {
         <div className="w-[100%]">
         <h3 className="text-lg text-center font-semibold">{prod.nombre}</h3>
 
-        <img className="w-[100%] h-40 aspect-[1] object-contain" src={`../img/${prod.img}`} alt={`prod ${prod.nombre}`} />
+        <img className="w-[100%] h-40 aspect-[1] object-contain" src={`${prod.img}`} alt={`prod ${prod.nombre}`} />
         <p className="w-[100%] text-center">{prod.descripcion}</p>
       </div>
 
@@ -41,7 +41,7 @@ export const ItemCart = ({ prod }) => {
                 >
                   -
                 </button>
-                <span className="text-xl font-bold">{contador}</span>
+                <span className="text-xl font-bold pr-2">{contador}</span>
                 <button
                   className="bg-blue-700  active:scale-95  hover:bg-green-700 text-while px-4 rounded "
                   onClick={() => {incrementarContador(); agregarProducto(prod, (contador == prod.stock ?contador: contador+1)) }}
