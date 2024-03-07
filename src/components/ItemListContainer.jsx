@@ -11,25 +11,23 @@ export const ItemListContainer = () => {
   console.log(cid);
   useEffect(() => {
     const obtenerProductos = async () => {
-        try {
-            const respuesta = await getProducts()
-            if(cid){
-
-                const productosFiltrados = respuesta.filter( resp => resp.categoria.some(cat => cid.includes(cat)));
-                setProductos(productosFiltrados)
-
-            } else{
-                setProductos(respuesta)
-                console.log(respuesta)
-            }
-
-        } catch (error) {
-            console.log(error)
+      try {
+        const respuesta = await getProducts();
+        if (cid) {
+          const productosFiltrados = respuesta.filter((resp) =>
+            resp.categoria.some((cat) => cid.includes(cat))
+          );
+          setProductos(productosFiltrados);
+        } else {
+          setProductos(respuesta);
+          console.log(respuesta);
         }
-    }
-    obtenerProductos()
-
-}, [cid])
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    obtenerProductos();
+  }, [cid]);
 
   return (
     <>

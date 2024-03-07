@@ -14,7 +14,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-// con la siguientes funciones creo/transfiero los productos en la bdd, con el fs.readFile accedo al json en el entorno de node.js, es como el fetch pero en node, ahi genero un productos y luego lo recorro con for of y genero una copia en la base de datos (db)
 export const createProducts = async () => {
 
     try {
@@ -40,7 +39,6 @@ export const createProducts = async () => {
     }
 };
 
-// Ya subimos los productos, ahora los consultamos desde la db, la 1era etapa devuelve un objeto de firebase con sus elementos, usamos el .map en el objeto.doc (.doc pq tenemos que acceder a la totalidad de los documentos del objeto, que de carácter complejo, es algo propio de firebase) para generar una copia con todos los elementos tal cual necesitamos, en un objeto de carácter simple.
 export const getProducts = async () => {
     try {
         const productos = await getDocs(collection(db, "productos"))
@@ -57,7 +55,6 @@ export const getProducts = async () => {
 
 }
 
-//la dinámica es la misma, pero aca trabajos solo sobre 1 item en base a la id, por eso cambiamos collection por doc y getDocs por getDoc en singular y sumamos a la consulta el id que queremos obtener.
 export const getProduct = async (id) => {
     try {
         const producto = await getDoc(doc(db, "productos", id))
@@ -75,7 +72,6 @@ export const getProduct = async (id) => {
 
 }
 
-// para actualizar los productos, necesitamos dos elementos obligatoriamente, el ID para reconocer el elemento y INFO, que es el valor que queremos modificar.
 
 export const updateProduct = async (id, info) => {
     const respuesta = await updateDoc(doc(db, "productos", id), info)
@@ -83,7 +79,6 @@ export const updateProduct = async (id, info) => {
 
 }
 
-//Eliminar producto
 
 export const deleteProducto = async (id) => {
 
@@ -92,14 +87,7 @@ export const deleteProducto = async (id) => {
 
 
 }
-//ejemplo de como actualizar un producto
-// updateProduct("1LeKvC1USQFiId9EMHe8", {
-//     'precio':155
-// }) .then(rest => console.log(rta)) debe devolver undefined para confirmar que se cargo la actualizacion
 
-//con deleteProduct("acaIngresamosElID") y elimina el producto
-
-//Como crear y leer ordenes de compras
 
 
 export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {

@@ -5,7 +5,6 @@ export const Categorias = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeTimeoutRef = useRef(null);
 
-
   const openDropdown = () => {
     clearTimeout(closeTimeoutRef.current);
     setIsOpen(true);
@@ -14,7 +13,7 @@ export const Categorias = () => {
   const closeDropdown = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setIsOpen(false);
-    }, 200); // Esperar 200 milisegundos antes de cerrar
+    }, 200);
   };
 
   return (
@@ -44,7 +43,6 @@ export const Categorias = () => {
         </svg>
       </button>
 
-      {/* Dropdown menu */}
       {isOpen && (
         <div
           className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700  max-w-[100%]"
