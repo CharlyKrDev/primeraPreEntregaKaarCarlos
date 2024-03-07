@@ -1,4 +1,5 @@
 import "./styles/App.css";
+import 'react-toastify/dist/ReactToastify.css'
 import { Navbar } from "./components/Navbar";
 import { LandingPage } from "./components/LandingPage";
 import { ItemListContainer } from "./components/ItemListContainer";
@@ -9,6 +10,8 @@ import { Checkout } from "./components/Checkout";
 import { ItemDetailsContainer } from "./components/ItemDetailsContainer";
 import { NotFound } from "./components/NotFound";
 import { CarritoProvider } from "./context/CartContext";
+import { ToastContainer } from "react-toastify";
+
 
 export const App = () => {
   return (
@@ -16,7 +19,7 @@ export const App = () => {
       <BrowserRouter>
         <CarritoProvider>
           <Navbar />
-
+          <ToastContainer/>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/tienda" element={<ItemListContainer />} />

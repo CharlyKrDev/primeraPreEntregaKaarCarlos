@@ -1,4 +1,6 @@
 import { useState, createContext, useContext } from "react";
+import { toast } from "react-toastify";
+
 
 
 const CarritoContext = createContext()
@@ -32,13 +34,39 @@ export const CarritoProvider = (props) => {
     }
 
     const removerProducto = (id) => {
+        toast.error(
+            `El juego ha sido eliminado del carrito`,
+            {
+              position: "top-left",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme:'colored'
+            }
+          );
 
         setCarrito(carrito.filter(prod => prod.id !== id))
+        
     }
 
     const vaciarCarrito = () => {
 
         setCarrito([])
+        toast.info(
+            `Se ha vaciado el carrito`,
+            {
+              position: "top-left",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            })
     }
 
     const cantidadDeProductos = () => {

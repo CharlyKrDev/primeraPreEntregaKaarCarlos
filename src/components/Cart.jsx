@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import { useCarritoContext } from "../context/CartContext";
 import { ItemList } from "./ItemList";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 export const Cart = () => {
   const { carrito, vaciarCarrito, precioTotalDeCompra } = useCarritoContext();
-  const finalizarCarrito = () => {
-    const codigoAleatorio = Math.random().toString(36).substring(2);
-    Swal.fire({
-      title: "Reserva realizada!",
-      text: `Complete el formulario para ser contactado y cargue el código: ${codigoAleatorio} `,
-      icon: "success",
-      confirmButtonText: "Confirmar",
-    });
-  };
+  // const finalizarCarrito = () => {
+  //   const codigoAleatorio = Math.random().toString(36).substring(2);
+  //   Swal.fire({
+  //     title: "Reserva realizada!",
+  //     text: `Complete el formulario para ser contactado y cargue el código: ${codigoAleatorio} `,
+  //     icon: "success",
+  //     confirmButtonText: "Confirmar",
+  //   });
+  // };
   const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center hover:scale-110 active:scale-95 ease-in-out transition-all`
   const botoneraCarritoFinalizar = `active:scale-95 text-white bg-blue-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
   const botoneraCarritoComprar = `active:scale-95 text-white bg-blue-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`
@@ -49,7 +49,7 @@ export const Cart = () => {
                   <button className={botoneraCarrito}>Continuar comprando</button>
                 </Link>
                 <Link to={"/checkout"}>
-                  <button className={botoneraCarritoComprar} onClick={finalizarCarrito}>Finalizar compra</button>
+                  <button className={botoneraCarritoComprar} >Finalizar compra</button>
                 </Link>
               </div>
             </div>

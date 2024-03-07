@@ -62,7 +62,6 @@ export const getProduct = async (id) => {
     try {
         const producto = await getDoc(doc(db, "productos", id))
         const item = { ...producto.data(), id: producto.id }
-        console.log('probando')
         return item
 
     } catch (error) {
@@ -101,6 +100,7 @@ export const deleteProducto = async (id) => {
 //con deleteProduct("acaIngresamosElID") y elimina el producto
 
 //Como crear y leer ordenes de compras
+
 
 export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
 

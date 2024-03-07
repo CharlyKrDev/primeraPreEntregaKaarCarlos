@@ -20,6 +20,7 @@ export const useContador = (valorMinimo = 0, valorMax = 1, step = 1) =>{
     const reiniciarContador =()=>{
 
         setContador( valorMinimo )
+ 
     }
 
 

@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContador } from "../hooks/useCounter.js";
 import { useCarritoContext } from "../context/CartContext";
+import { toast } from "react-toastify";
 
 export const ItemDetail = ({ producto }) => {
-  const { agregarProducto } = useCarritoContext();
+  const { agregarProducto, removerProducto } = useCarritoContext();
   const {
     contador,
     incrementarContador,
@@ -14,6 +15,19 @@ export const ItemDetail = ({ producto }) => {
 
   const sumarCarrito = () => {
     agregarProducto(producto, contador);
+    toast.success(
+      `${contador} "${producto.nombre}" agregados subtotal: $${precioTotal}`,
+      {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      }
+    );
   };
 
   const agregarCarrito =
@@ -118,14 +132,6 @@ export const ItemDetail = ({ producto }) => {
                 >
                   <ion-icon name="trash-outline">Borrar</ion-icon>
                 </button>
-                {/* <Link to={"/checkout"}>
-                  <button
-                    onClick={finalizarCarrito}
-                    className="active:scale-95 bg-green-800 rounded-lg text-center p-1 flex text-xl mr-2"
-                  >
-                    <ion-icon name="cash-outline">Comprar</ion-icon>
-                  </button>
-                </Link> */}
               </div>
             </section>
             <div className="h-[10%] w-[98%] flex mb-4 ml-1">

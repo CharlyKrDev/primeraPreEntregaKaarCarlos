@@ -5,7 +5,7 @@ export const LandingPage = () => {
   return (
 
     <>
-      <main className='bg-black'>
+      <main className='bg-black '>
         <section className='flex flex-col text-white items-center justify-center bg-[#242424] min-h-[27.2vh] box-content w-auto h-auto border-4'>
           CARRUSEL
         </section >
