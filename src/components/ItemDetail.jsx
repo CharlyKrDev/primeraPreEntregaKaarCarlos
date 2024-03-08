@@ -5,7 +5,7 @@ import { useCarritoContext } from "../context/CartContext";
 import { toast } from "react-toastify";
 
 export const ItemDetail = ({ producto }) => {
-  const { agregarProducto } = useCarritoContext();
+  const { agregarProducto, removerProducto } = useCarritoContext();
   const {
     contador,
     incrementarContador,

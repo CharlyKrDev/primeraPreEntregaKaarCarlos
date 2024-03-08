@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import {
   createOrdenCompra,
+  getOrdenCompra,
   getProduct,
   updateProduct,
 } from "../firebase/firebase";
@@ -20,12 +21,15 @@ export const Checkout = () => {
   const { carrito, precioTotalDeCompra, vaciarCarrito } = useCarritoContext();
 
   const handleSubmit = (e) => {
+    // estoy convirtiendo información html a un objeto iterator y luego a uno simple
     e.preventDefault();
-    const datForm = new FormData(formRef.current); 
-    const cliente = Object.fromEntries(datForm); 
+    const datForm = new FormData(formRef.current); // objeto iterator
+    const cliente = Object.fromEntries(datForm); // objeto iterator
 
+    // Generar la orden de compra
 
-    const aux = [...carrito]; 
+    //Modificar Stock
+    const aux = [...carrito]; //genero una copia del carrito en aux por medio de spread, la idea es modificar este y no el original
     aux.forEach((prodCarrito) => {
       getProduct(prodCarrito.id).then((prodDB) => {
         if (prodDB.stock >= prodCarrito.unidad) {
@@ -35,7 +39,7 @@ export const Checkout = () => {
           console.log(
             `El stock del producto ${prodDB.nombre} no cuenta con stock suficiente`
           );
-          aux.filter((prod) => prod.id != prodDB.id); 
+          aux.filter((prod) => prod.id != prodDB.id); //Elimino el producto del carrito que no tenga stock
         }
       });
     });
@@ -69,9 +73,9 @@ export const Checkout = () => {
             theme: "dark",
           }
         );
-        vaciarCarrito(); 
-        e.target.reset(); 
-        navigate("/"); 
+        vaciarCarrito(); //resetea el carrito despues de ser usado.
+        e.target.reset(); //resetea el formulario despues de ser usado.
+        navigate("/"); //resetea el navegador despues de ser usado.
       })
       .catch(e => {
         toast.error(`Error al generar orden de compra: ${e}`, {
