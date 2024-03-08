@@ -7,6 +7,7 @@ export const CarritoProvider = (props) => {
   const [carrito, setCarrito] = useState([]);
 
   const estaEnCarrito = (id) => {
+
     return carrito.some((prod) => prod.id === id);
   };
   const agregarProducto = (producto, cantidad) => {
@@ -23,6 +24,7 @@ export const CarritoProvider = (props) => {
 
       setCarrito([...carrito, nuevoProducto]);
     }
+
   };
 
   const removerProducto = (id) => {
