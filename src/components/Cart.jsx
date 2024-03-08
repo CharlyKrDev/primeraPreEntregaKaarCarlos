@@ -31,13 +31,16 @@ export const Cart = () => {
       {carrito.length === 0 ? (
         <>
           <section className="flex m-auto flex-col items-center w-full">
-            <img className='invert aspect-square w-[40%] sm:w-[20%] m-auto' src={Carrito} alt="carritoVacio" />
+            <img
+              className="invert aspect-square w-[40%] sm:w-[20%] m-auto"
+              src={Carrito}
+              alt="carritoVacio"
+            />
             <h2 className="m-auto text-center mb-4">
-            <WelcomeTyping message="APROVECHA ALGUNA DE NUESTRAS INCREÍBLES OFERTAS!" />            </h2>
+              <WelcomeTyping message="APROVECHA ALGUNA DE NUESTRAS INCREÍBLES OFERTAS!" />{" "}
+            </h2>
             <Link to={"/tienda"}>
-              <button className={botoneraCarrito}>
-                Volver a la tienda
-              </button>
+              <button className={botoneraCarrito}>Volver a la tienda</button>
             </Link>
           </section>
         </>
