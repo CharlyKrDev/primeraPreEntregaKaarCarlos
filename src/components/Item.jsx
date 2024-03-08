@@ -37,7 +37,7 @@ export const Item = ({ prod }) => {
     );
   return (
     <>
-      <section className="bg-[#313131] w-40 flex flex-col justify-between m-8 rounded sm:w-52 border-[1px]">
+      <section className="bg-[#313131] flex flex-col justify-between m-8 rounded sm:w-52 w-[60%] border-[1px]">
         <Link to={`/producto/${prod.id}`}>
           <picture className=" ">
             <img
