@@ -57,7 +57,6 @@ export const getProducts = async () => {
 
 }
 
-//la dinámica es la misma, pero aca trabajos solo sobre 1 item en base a la id, por eso cambiamos collection por doc y getDocs por getDoc en singular y sumamos a la consulta el id que queremos obtener.
 export const getProduct = async (id) => {
     try {
         const producto = await getDoc(doc(db, "productos", id))
@@ -75,7 +74,6 @@ export const getProduct = async (id) => {
 
 }
 
-// para actualizar los productos, necesitamos dos elementos obligatoriamente, el ID para reconocer el elemento y INFO, que es el valor que queremos modificar.
 
 export const updateProduct = async (id, info) => {
     const respuesta = await updateDoc(doc(db, "productos", id), info)
@@ -83,7 +81,6 @@ export const updateProduct = async (id, info) => {
 
 }
 
-//Eliminar producto
 
 export const deleteProducto = async (id) => {
 
@@ -92,14 +89,7 @@ export const deleteProducto = async (id) => {
 
 
 }
-//ejemplo de como actualizar un producto
-// updateProduct("1LeKvC1USQFiId9EMHe8", {
-//     'precio':155
-// }) .then(rest => console.log(rta)) debe devolver undefined para confirmar que se cargo la actualizacion
-
-//con deleteProduct("acaIngresamosElID") y elimina el producto
-
-//Como crear y leer ordenes de compras
+/
 
 
 export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {

@@ -7,8 +7,6 @@ export const CarritoProvider = (props) => {
   const [carrito, setCarrito] = useState([]);
 
   const estaEnCarrito = (id) => {
-    //Busco la existencia del producto por id
-
     return carrito.some((prod) => prod.id === id);
   };
   const agregarProducto = (producto, cantidad) => {
@@ -25,7 +23,6 @@ export const CarritoProvider = (props) => {
 
       setCarrito([...carrito, nuevoProducto]);
     }
-
   };
 
   const removerProducto = (id) => {
