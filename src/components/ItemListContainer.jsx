@@ -35,7 +35,7 @@ export const ItemListContainer = () => {
         <h2 id="tienda" className="m-4 ml-12 text-[30px]">
           Tienda
         </h2>
-        <div className="flex flex-wrap justify-center gap-2 m-auto w-[100%] h-[100%] pb-12">
+        <div className="flex flex-wrap justify-center gap-2 m-auto w-[100%] h-[100%] pb-20">
           <ItemList productos={producto} plantilla="Item" />
         </div>
       </section>

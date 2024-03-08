@@ -92,8 +92,8 @@ export const ItemDetail = ({ producto }) => {
         </section>
         <section className="h-[50%]  w-[80%] m-auto ">
           <div className="h-[60%] mt-8 flex flex-col justify-center">
-            <div className="flex flex-col items-center">
-              <p className="mx-2 my-2 text-left text-wrap text-white">
+            <div className="flex flex-col items-center ">
+              <p className="mx-2 my-2 text-left text-wrap text-white w-[100%] m-auto">
                 {producto.descripcion}
               </p>
               <h3 className="text-center text-sm mt-1">{stock}</h3>
@@ -134,7 +134,7 @@ export const ItemDetail = ({ producto }) => {
                 </button>
               </div>
             </section>
-            <div className="h-[10%] w-[98%] flex mb-4 ml-1">
+            <div className="h-[10%] w-[98%] flex mb-2">
               <button
                 disabled={contador === 0}
                 className={agregarCarrito}

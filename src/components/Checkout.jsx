@@ -1,12 +1,16 @@
 import { useRef } from "react";
 import {
   createOrdenCompra,
+  getOrdenCompra,
   getProduct,
   updateProduct,
 } from "../firebase/firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useCarritoContext } from "../context/CartContext";
 import { toast } from "react-toastify";
+import { botoneraCarrito } from "./Cart";
+import { WelcomeTyping } from "./WelcomeTyping";
+
 
 export const Checkout = () => {
   const indicaciones = "text-center m-auto text-wrap text-sm font-bold";
@@ -17,11 +21,15 @@ export const Checkout = () => {
   const { carrito, precioTotalDeCompra, vaciarCarrito } = useCarritoContext();
 
   const handleSubmit = (e) => {
+    // estoy convirtiendo información html a un objeto iterator y luego a uno simple
     e.preventDefault();
-    const datForm = new FormData(formRef.current);
-    const cliente = Object.fromEntries(datForm);
+    const datForm = new FormData(formRef.current); // objeto iterator
+    const cliente = Object.fromEntries(datForm); // objeto iterator
 
-    const aux = [...carrito];
+    // Generar la orden de compra
+
+    //Modificar Stock
+    const aux = [...carrito]; //genero una copia del carrito en aux por medio de spread, la idea es modificar este y no el original
     aux.forEach((prodCarrito) => {
       getProduct(prodCarrito.id).then((prodDB) => {
         if (prodDB.stock >= prodCarrito.unidad) {
@@ -31,16 +39,16 @@ export const Checkout = () => {
           console.log(
             `El stock del producto ${prodDB.nombre} no cuenta con stock suficiente`
           );
-          aux.filter((prod) => prod.id != prodDB.id);
+          aux.filter((prod) => prod.id != prodDB.id); //Elimino el producto del carrito que no tenga stock
         }
       });
     });
 
     const aux2 = aux.map((prod) => ({
-      id: prod.id,
-      nombre: prod.nombre,
-      unidad: prod.unidad,
-      precio: prod.precio,
+        id: prod.id,
+        nombre:prod.nombre,
+        unidad: prod.unidad,
+        precio: prod.precio,
     }));
     createOrdenCompra(
       cliente,
@@ -49,8 +57,7 @@ export const Checkout = () => {
       new Date().toLocaleDateString("es-AR", {
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       })
-    )
-      .then((ordenCompra) => {
+    ).then(ordenCompra => {
         toast.success(
           `Muchas gracias por comprar con nosotros, su ID de compra es: ${
             ordenCompra.id
@@ -66,11 +73,11 @@ export const Checkout = () => {
             theme: "dark",
           }
         );
-        vaciarCarrito();
-        e.target.reset();
-        navigate("/");
+        vaciarCarrito(); //resetea el carrito despues de ser usado.
+        e.target.reset(); //resetea el formulario despues de ser usado.
+        navigate("/"); //resetea el navegador despues de ser usado.
       })
-      .catch((e) => {
+      .catch(e => {
         toast.error(`Error al generar orden de compra: ${e}`, {
           position: "top-right",
           autoClose: 5000,
@@ -88,12 +95,15 @@ export const Checkout = () => {
     <>
       {carrito.length === 0 ? (
         <>
-          <h2>Para finalizar compra debe tener productos en el carrito</h2>
-          <Link to={"/"}>
-            <button className="bg-indigo-500 text-white px-4 py-2 rounded">
-              Volver al inicio
+          <section className="flex m-auto flex-col w-[100%] items-center h-[70%] justify-center">
+          <h2 className="mb-4 mx-3"> <WelcomeTyping message="Para poder finalizar una compra debe tener al menos un producto en el carrito!" />
+</h2>
+          <Link to={"/tienda"}>
+            <button className={botoneraCarrito}>
+              Ir a la tienda
             </button>
           </Link>
+          </section>
         </>
       ) : (
         <main className="w-[90%] h-[100vh]  m-auto text-black">

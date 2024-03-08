@@ -67,12 +67,6 @@ export const Navbar = () => {
                 <button className={menuGeneral}>Comunidad</button>
               </Link>
             </li>
-            <li>
-              <Link to={"/contacto"}>
-                <button className={menuGeneral}>Contacto</button>
-              </Link>
-            </li>
-            <li className="text-white px-2 py-2 rounded-lg mr-24"></li>
           </ul>
         </div>
 

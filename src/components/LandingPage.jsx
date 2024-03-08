@@ -11,7 +11,7 @@ export const LandingPage = () => {
         <section className="md:flex justify-center sm:h-[54.5vh] h-full ml-6">
           <article className="flex flex-col text-center md:m-4 m-auto w-[40%]">
             <h1 className="font-bold sm:m-auto">
-              <WelcomeTyping />
+            <WelcomeTyping message="Bienvenid@ a tu tienda gamer amiga!" />
             </h1>
             <p className="sm:m-auto m-auto mt-6 mb-6 text-center text-lg">
               En nuestra web no solo vas a encontrar los <strong>juegos</strong>{" "}

@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { useCarritoContext } from "../context/CartContext";
 import { ItemList } from "./ItemList";
 import { toast } from "react-toastify";
+import { WelcomeTyping } from "./WelcomeTyping";
+
+import Carrito from "../img/carrito.png";
+
+export const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center hover:scale-110 active:scale-95 ease-in-out transition-all`;
 
 export const Cart = () => {
   const { carrito, vaciarCarrito, precioTotalDeCompra } = useCarritoContext();
@@ -18,7 +23,6 @@ export const Cart = () => {
       theme: "colored",
     });
   };
-  const botoneraCarrito = `active:scale-95 text-white bg-blue-700 hover:bg-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center hover:scale-110 active:scale-95 ease-in-out transition-all`;
   const botoneraCarritoFinalizar = `active:scale-95 text-white bg-blue-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
   const botoneraCarritoComprar = `active:scale-95 text-white bg-blue-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center`;
 
@@ -26,14 +30,16 @@ export const Cart = () => {
     <>
       {carrito.length === 0 ? (
         <>
-          <h2 className="m-auto pr-8 mt-20 mb-20">
-            APROVECHA ALGUNA DE NUESTRAS INCREÍBLES OFERTAS
-          </h2>
-          <Link to={"/"}>
-            <button className="sm:bg-black opacity-80 border-2 sm:border-black mb-4 mt-4 p-2 hover:bg-white hover:font-bold hover:text-black">
-              Volver inicio
-            </button>
-          </Link>
+          <section className="flex m-auto flex-col items-center">
+            <img className='invert' src={Carrito} alt="" />
+            <h2 className="m-auto pr-8 mt-20 mb-20">
+            <WelcomeTyping message="APROVECHA ALGUNA DE NUESTRAS INCREÍBLES OFERTAS!" />            </h2>
+            <Link to={"/tienda"}>
+              <button className={botoneraCarrito}>
+                Volver a la tienda
+              </button>
+            </Link>
+          </section>
         </>
       ) : (
         <>
