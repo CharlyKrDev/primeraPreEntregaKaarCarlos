@@ -93,7 +93,7 @@ export const ItemDetail = ({ producto }) => {
         <section className="h-[50%]  w-[80%] m-auto ">
           <div className="h-[60%] mt-8 flex flex-col justify-center">
             <div className="flex flex-col items-center ">
-              <p className="mx-2 my-2 text-left text-wrap text-white w-[100%] m-auto">
+              <p className="mb-4 text-left text-wrap text-white w-[100%] text-sm m-auto">
                 {producto.descripcion}
               </p>
               <h3 className="text-center text-sm mt-1">{stock}</h3>

@@ -18,7 +18,7 @@ export const ItemCart = ({ prod }) => {
       : prod.precio * contador;
 
   return (
-    <section className="bg-[#242424] flex border-2 m-auto my-2 w-[100%] j">
+    <section className="bg-[#242424] flex border-2 m-auto my-2 w-[100%]">
       <div className=" flex flex-col items-center w-[40%] ">
         <div className="w-[100%]">
           <h3 className="text-lg text-center font-semibold">{prod.nombre}</h3>

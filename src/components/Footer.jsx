@@ -42,7 +42,7 @@ export const Footer = () => {
             </button>
           </NavLink>
 
-          <button className="fixed inset-y-[55%]  right-10 pointer-events-none">
+          <button className="fixed inset-y-[55%]  right-6 pointer-events-none">
             <NavLink to="https://www.whatsapp.com/" target="_blank">
               <ion-icon
                 class="hover:scale-150 active:scale-95 ease-in-out transition-all text-3xl text-green-400  pointer-events-auto"
