@@ -25,6 +25,7 @@ export const CarritoProvider = (props) => {
 
       setCarrito([...carrito, nuevoProducto]);
     }
+
   };
 
   const removerProducto = (id) => {
