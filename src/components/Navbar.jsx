@@ -51,8 +51,7 @@ export const Navbar = () => {
         <div className={menuClass}>
           <ul
             onMouseLeave={plegarMenu}
-            className="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
-            onMouseLeave={plegarMenu}
+            className="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8 lg:pl-52 md:pr-20"
           >
             <li>
               <Link to={tiendaWeb}>

@@ -30,9 +30,9 @@ export const Cart = () => {
     <>
       {carrito.length === 0 ? (
         <>
-          <section className="flex m-auto flex-col items-center">
-            <img className='invert' src={Carrito} alt="" />
-            <h2 className="m-auto pr-8 mt-20 mb-20">
+          <section className="flex m-auto flex-col items-center w-full">
+            <img className='invert aspect-square w-[40%] sm:w-[20%] m-auto' src={Carrito} alt="carritoVacio" />
+            <h2 className="m-auto text-center mb-4">
             <WelcomeTyping message="APROVECHA ALGUNA DE NUESTRAS INCREÍBLES OFERTAS!" />            </h2>
             <Link to={"/tienda"}>
               <button className={botoneraCarrito}>

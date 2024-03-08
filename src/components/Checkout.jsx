@@ -118,15 +118,14 @@ export const Checkout = () => {
               <div className="h-[100%] w-[33.33%]  flex flex-col sm:rounded-full rounded-3xl border-2 border-blue-700 p-2 bg-yellow-600 ">
                 <h3 className="text-center font-bold">Paso 2:</h3>
                 <p className={indicaciones}>
-                  Completar los datos en el formulario e informar el código de
-                  gestión.
+                  Completar los datos en el formulario.
                 </p>
               </div>
               <div className="h-[100%] w-[33.33%]  flex flex-col sm:rounded-full rounded-3xl border-2 border-blue-700 p-2 bg-purple-600">
                 <h3 className="text-center font-bold">Paso 3:</h3>
                 <p className={indicaciones}>
                   Te vamos a estar contactando en la brevedad para finalizar la
-                  operación, en un periodo no mayor a las 72hrs hábiles.
+                  operación, en un periodo no mayor a las 72hrs hábiles. Gracias.
                 </p>
               </div>
             </div>
