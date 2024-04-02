@@ -29,7 +29,8 @@ npm start
 
 #Gracias!
 
+Landing Page
+![image](https://github.com/CharlyKrDev/primeraPreEntregaKaarCarlos/assets/123911937/d94bc467-3102-4d6c-ac7b-78f8ffcfaa32)
 
-
-
+Shop
 ![image](https://github.com/CharlyKrDev/primeraPreEntregaKaarCarlos/assets/123911937/f8a5266c-db3a-4c56-81aa-367c484cdea4)
